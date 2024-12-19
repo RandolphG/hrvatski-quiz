@@ -2,12 +2,18 @@
   "builds": [
     {
       "src": "./server/index.js",
-      "use": "@vercel/node"
+      "use": "@now/node",
+      "config": { "maxLambdaSize": "15mb" }
     }
   ],
   "routes": [
     {
-      "src": "/(.*)"
+      "src": "/static/(.*)",
+      "dest": "/public/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "./server/index.js"
     }
   ]
 }
