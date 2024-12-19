@@ -1,94 +1,135 @@
 let questions = [
   {
-    numb: 1,
-    question: "What does HTML stand for?",
-    answer: "Hyper Text Markup Language",
+    numb: 50,
+    question:
+      "Početkom 4. stoljeća rimski car Dioklecijan izgradio je svoju palaču na području Dalmacije. Kako se danas zove grad čija je povijesna jezgra Dioklecijanova palača?",
+    answer: "Split",
+    options: ["Zadar", "Split", "Dubrovnik", "Rijeka"],
+  },
+  {
+    numb: 51,
+    question:
+      "Zagrebački nadbiskup i kardinal koji je bio proganjan i osuđen u političkom procesu nakon Drugog svjetskog rata, zvao se:",
+    answer: "Alojzije Stepinac",
     options: [
-      "Hyper Text Preprocessor",
-      "Hyper Text Markup Language",
-      "Hyper Text Multiple Language",
-      "Hyper Tool Multi Language",
+      "Alojzije Stepinac",
+      "Franjo Kuharić",
+      "Miroslav Bulešić",
+      "Josip Juraj Strossmayer",
     ],
   },
   {
-    numb: 2,
-    question: "What does CSS stand for?",
-    answer: "Cascading Style Sheet",
+    numb: 52,
+    question:
+      "Godine 1993. Hrvatska vojska izvela je munjevitu vojnu akciju kojom je, kopnenim putem, povezala sjever i jug Hrvatske, koji je agresor okupacijom prostora razdvojio. To je bila akcija:",
+    answer: "Maslenica",
+    options: ["Bljesak", "Oluja", "Maslenica", "Zima '94"],
+  },
+  {
+    numb: 53,
+    question:
+      "Nacionalni park nedaleko Šibenika, poznat po prekrasnim sedrenim slapovima (Roški slap, Skradinski buk) je:",
+    answer: "Krka",
+    options: ["Krka", "Plitvička Jezera", "Paklenica", "Risnjak"],
+  },
+  {
+    numb: 54,
+    question: "Ivana Brlić Mažuranić bila je poznata hrvatska:",
+    answer: "književnica",
+    options: ["književnica", "slikarica", "znanstvenica", "skladateljica"],
+  },
+  {
+    numb: 55,
+    question: "Skladatelj prve hrvatske opere »Ljubav i zloba« je:",
+    answer: "Vatroslav Lisinski",
     options: [
-      "Common Style Sheet",
-      "Colorful Style Sheet",
-      "Computer Style Sheet",
-      "Cascading Style Sheet",
+      "Ivan Zajc",
+      "Vatroslav Lisinski",
+      "Jakov Gotovac",
+      "Josip Runjanin",
     ],
   },
   {
-    numb: 3,
-    question: "What does PHP stand for?",
-    answer: "Hypertext Preprocessor",
+    numb: 56,
+    question: "Prvi predsjednik Republike Hrvatske bio je:",
+    answer: "Franjo Tuđman",
     options: [
-      "Hypertext Preprocessor",
-      "Hypertext Programming",
-      "Hypertext Preprogramming",
-      "Hometext Preprocessor",
+      "Stjepan Radić",
+      "Franjo Tuđman",
+      "Ante Pavelić",
+      "Ivo Josipović",
     ],
   },
   {
-    numb: 4,
-    question: "What does SQL stand for?",
-    answer: "Structured Query Language",
+    numb: 57,
+    question:
+      "Renesansni dubrovački dramski pisac i komediograf, autor poznatih djela: »Dundo Maroje«, »Skup« i »Novela od Stanca«, zvao se:",
+    answer: "Marin Držić",
+    options: ["Marin Držić", "Ivan Gundulić", "Marko Marulić", "Petar Zoranić"],
+  },
+  {
+    numb: 58,
+    question:
+      "Koji je hrvatski otok poznat po čipki, siru, soli i najstarijim stablima maslina?",
+    answer: "Pag",
+    options: ["Krk", "Pag", "Hvar", "Brač"],
+  },
+  {
+    numb: 59,
+    question:
+      "Navedite ime jednog od najpoznatijih i najboljih hrvatskih košarkaša, koji je igrao i u NBA ligi, rođenog u Šibeniku, čija je skulptura postavljena u parku Olimpijskog muzeja u Lausanni:",
+    answer: "Dražen Petrović",
+    options: ["Toni Kukoč", "Dino Rađa", "Dražen Petrović", "Stojko Vranković"],
+  },
+  {
+    numb: 60,
+    question:
+      "Zbog datuma proglašenja, Ustav Republike Hrvatske ima i popularni naziv:",
+    answer: "božićni",
+    options: ["proljetni", "ljetni", "božićni", "jesenski"],
+  },
+  {
+    numb: 61,
+    question:
+      "Bojni ples s mačevima koji se od 15. stoljeća tradicionalno održava na Korčuli zove se:",
+    answer: "Moreska",
+    options: ["Kolo", "Moreska", "Tanac", "Dubrovnik Waltz"],
+  },
+  {
+    numb: 62,
+    question:
+      "Opišite zastavu Republike Hrvatske: Sastoji se od tri boje koje su položene vodoravno i to ovim redom (odozgo prema dolje):",
+    answer: "CRVENA, BIJELA i PLAVA a u sredini zastave nalazi se GRB.",
     options: [
-      "Stylish Question Language",
-      "Stylesheet Query Language",
-      "Statement Question Language",
-      "Structured Query Language",
+      "CRVENA, BIJELA i PLAVA a u sredini zastave nalazi se GRB.",
+      "BIJELA, CRVENA i PLAVA a u sredini zastave nalazi se GRB.",
+      "PLAVA, BIJELA i CRVENA a u sredini zastave nalazi se GRB.",
+      "CRVENA, PLAVA i BIJELA a u sredini zastave nalazi se GRB.",
     ],
   },
   {
-    numb: 5,
-    question: "What does XML stand for?",
-    answer: "eXtensible Markup Language",
+    numb: 63,
+    question: "Koji hrvatski znanstvenik je izumio izmjeničnu struju?",
+    answer: "Nikola Tesla",
     options: [
-      "eXtensible Markup Language",
-      "eXecutable Multiple Language",
-      "eXTra Multi-Program Language",
-      "eXamine Multiple Language",
-    ],
-  },
-
-  {
-    numb: 6,
-    question: "Your Question is Here",
-
-    options: ["Option 1", "option 2", "option 3", "option 4"],
-  },
-  {
-    numb: 7,
-    question: "What if this is a really long question to  answer?",
-    answer: "Structured Query Language",
-    options: [
-      "Stylish Question Language",
-      "Stylesheet Query Language",
-      "Statement Question Language",
-      "Structured Query Language",
+      "Ruđer Bošković",
+      "Nikola Tesla",
+      "Ivan Meštrović",
+      "Andrija Mohorovičić",
     ],
   },
   {
-    numb: 8,
-    question: "What does XML stand for?",
-    answer: "eXtensible Markup Language",
-    options: [
-      "eXtensible Markup Language",
-      "eXecutable Multiple Language",
-      "eXTra Multi-Program Language",
-      "eXamine Multiple Language",
-    ],
+    numb: 64,
+    question:
+      "Kako se zove najpoznatiji nacionalni park u Hrvatskoj poznat po slapovima?",
+    answer: "Plitvička jezera",
+    options: ["Krka", "Plitvička jezera", "Paklenica", "Kornati"],
   },
-
   {
-    numb: 9,
-    question: "Your Question is Here",
-
-    options: ["Option 1", "option 2", "option 3", "option 4"],
+    numb: 65,
+    question: "Koji grad u Hrvatskoj nazivaju 'Biserom Jadrana'?",
+    answer: "Dubrovnik",
+    options: ["Split", "Dubrovnik", "Zadar", "Rijeka"],
   },
 ];
 //selecting all required elements
@@ -227,7 +268,11 @@ function optionSelected(answer) {
   let correcAns = questions[que_count].answer; //getting correct answer from array
   const allOptions = option_list.children.length; //getting all option items
 
+  console.log(`optionSelected: ${answer.textContent}`);
+
   if (userAns === correcAns) {
+    console.log(`userAns ${userAns} | correctAns ${correcAns}`);
+
     //if user selected option is equal to array's correct answer
     userScore += 1; //upgrading score value with 1
     answer.classList.add("correct"); //adding green color to correct selected option
@@ -237,6 +282,10 @@ function optionSelected(answer) {
   } else {
     answer.classList.add("incorrect"); //adding red color to correct selected option
     answer.insertAdjacentHTML("beforeend", crossIconTag); //adding cross icon to correct selected option
+    console.log(`userAns ${userAns} | correctAns ${correcAns}`);
+    console.log(
+      `userAns is type of ${typeof userAns} | correctAns is type ${typeof correcAns}`,
+    );
     console.log("Wrong Answer");
 
     for (i = 0; i < allOptions; i++) {
