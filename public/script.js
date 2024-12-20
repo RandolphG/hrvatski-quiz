@@ -1,38 +1,5 @@
 let questions = [
   {
-    numb: 50,
-    question:
-      "Početkom 4. stoljeća rimski car Dioklecijan izgradio je svoju palaču na području Dalmacije. Kako se danas zove grad čija je povijesna jezgra Dioklecijanova palača?",
-    answer: "Split",
-    options: ["Zadar", "Split", "Dubrovnik", "Rijeka"],
-  },
-  {
-    numb: 51,
-    question:
-      "Zagrebački nadbiskup i kardinal koji je bio proganjan i osuđen u političkom procesu nakon Drugog svjetskog rata, zvao se:",
-    answer: "Alojzije Stepinac",
-    options: [
-      "Alojzije Stepinac",
-      "Franjo Kuharić",
-      "Miroslav Bulešić",
-      "Josip Juraj Strossmayer",
-    ],
-  },
-  {
-    numb: 52,
-    question:
-      "Godine 1993. Hrvatska vojska izvela je munjevitu vojnu akciju kojom je, kopnenim putem, povezala sjever i jug Hrvatske, koji je agresor okupacijom prostora razdvojio. To je bila akcija:",
-    answer: "Maslenica",
-    options: ["Bljesak", "Oluja", "Maslenica", "Zima '94"],
-  },
-  {
-    numb: 53,
-    question:
-      "Nacionalni park nedaleko Šibenika, poznat po prekrasnim sedrenim slapovima (Roški slap, Skradinski buk) je:",
-    answer: "Krka",
-    options: ["Krka", "Plitvička Jezera", "Paklenica", "Risnjak"],
-  },
-  {
     numb: 54,
     question: "Ivana Brlić Mažuranić bila je poznata hrvatska:",
     answer: "književnica",
@@ -131,6 +98,318 @@ let questions = [
     answer: "Dubrovnik",
     options: ["Split", "Dubrovnik", "Zadar", "Rijeka"],
   },
+  {
+    numb: 66,
+    question:
+      "Grad u sjeverozapadnoj Hrvatskoj, poznat kao barokna prijestolnica Hrvatske, čije je groblje dragulj parkovne arhitekture je:",
+    answer: "Varaždin",
+    options: ["Varaždin", "Čakovec", "Krapina", "Zagreb"],
+  },
+  {
+    numb: 67,
+    question: "Predsjednik Republike Hrvatske bira se na vrijeme od:",
+    answer: "5 godina",
+    options: ["5 godina", "4 godine", "6 godina", "7 godina"],
+  },
+  {
+    numb: 68,
+    question: "Najviša planina u Hrvatskoj, s najvišim vrhom od 1.831 m, je:",
+    answer: "Dinara",
+    options: ["Dinara", "Biokovo", "Velebit", "Papuk"],
+  },
+  {
+    numb: 69,
+    question:
+      "Svjetski afirmirani slikar, koji je studirao u Parizu, a slikao je alegorijske i povijesne kompozicije i portrete te je izradio svečani zastor Hrvatskog narodnog kazališta u Zagrebu »Hrvatski narodni preporod«, zvao se:",
+    answer: "Vlaho Bukovac",
+    options: [
+      "Vlaho Bukovac",
+      "Ivan Meštrović",
+      "Oton Iveković",
+      "Josip Račić",
+    ],
+  },
+  {
+    numb: 70,
+    question:
+      "»Tko pjeva zlo ne misli«, antologijsku »ljubavnu komediju s pjevanjem«, na temelju »Dnevnika malog Perice« Vjekoslava Majera, režirao je:",
+    answer: "Krešo Golik",
+    options: ["Krešo Golik", "Branko Bauer", "Zoran Tadić", "Antun Vrdoljak"],
+  },
+  {
+    numb: 71,
+    question:
+      "Vođa seljačke bune 1573. godine na području današnje sjeverozapadne Hrvatske bio je:",
+    answer: "Matija Gubec",
+    options: ["Matija Gubec", "Ivan Gundulić", "Franjo Tahi", "Marko Marulić"],
+  },
+  {
+    numb: 72,
+    question:
+      "U Republici Hrvatskoj u uporabi je HRVATSKI jezik i LATINIČNO pismo.",
+    answer: "HRVATSKI jezik i LATINIČNO pismo",
+    options: [
+      "HRVATSKI jezik i LATINIČNO pismo",
+      "SRPSKI jezik i ĆIRILICA",
+      "ENGLESKI jezik i LATINIČNO pismo",
+      "HRVATSKI jezik i GLAGOLJICA",
+    ],
+  },
+  {
+    numb: 73,
+    question:
+      "Novčana jedinica u uporabi u Republici Hrvatskoj je EURO , čiji stoti dio je CENT.",
+    answer: "EURO , čiji stoti dio je CENT",
+    options: [
+      "EURO , čiji stoti dio je CENT",
+      "KUNA , čiji stoti dio je LIPA",
+      "DINAR , čiji stoti dio je PARA",
+      "DOLAR , čiji stoti dio je CENT",
+    ],
+  },
+  {
+    numb: 74,
+    question:
+      "Najpoznatija hrvatska skijašica, osvajačica 4 zlatne i 2 srebrne olimpijske medalje u alpskom skijanju, zove se:",
+    answer: "Janica Kostelić",
+    options: [
+      "Janica Kostelić",
+      "Ivica Kostelić",
+      "Ana Jelušić",
+      "Nika Fleiss",
+    ],
+  },
+  {
+    numb: 75,
+    question:
+      "Ukupno 14 otoka i otočića čine nacionalni park u Jadranskom moru, zapadno od istarske obale, bogat po raznovrsnoj flori i fauni:",
+    answer: "NP Brijuni",
+    options: ["NP Brijuni", "NP Kornati", "NP Mljet", "NP Krka"],
+  },
+  {
+    numb: 76,
+    question: "Hrvatski tenisač, pobjednik Wimbledona 2001. godine je:",
+    answer: "Goran Ivanišević",
+    options: [
+      "Goran Ivanišević",
+      "Marin Čilić",
+      "Ivan Ljubičić",
+      "Borna Ćorić",
+    ],
+  },
+  {
+    numb: 77,
+    question:
+      "Najznačajnija endemična biljka hrvatske flore, zakonom zaštićena, zove se velebitska:",
+    answer: "Degenija",
+    options: ["Degenija", "Orhideja", "Runolist", "Planinska ruža"],
+  },
+  {
+    numb: 78,
+    question:
+      "Tko je izvršio oružanu agresiju na Republiku Hrvatsku 1990. godine, sukladno Deklaraciji o Domovinskom ratu?",
+    answer: "Srbi, Crna Gora i JNA",
+    options: [
+      "Srbi, Crna Gora i JNA",
+      "Italija i Austrija",
+      "Mađarska i Slovenija",
+      "Nijedna od navedenih",
+    ],
+  },
+  {
+    numb: 79,
+    question:
+      "Svjetski poznat izumitelj, fizičar i elektrotehničar rođen 1856. godine u Smiljanu kod Gospića, a umro 1943. godine u New Yorku, po kome je nazvana mjerna jedinica magnetskog polja je:",
+    answer: "Nikola Tesla",
+    options: [
+      "Nikola Tesla",
+      "Ivan Vučetić",
+      "Ruđer Bošković",
+      "Franjo Hanaman",
+    ],
+  },
+  {
+    numb: 80,
+    question:
+      "Prva hrvatska žrtva u Domovinskom ratu, hrvatski redarstvenik poginuo 1991. godine na Plitvicama zvao se:",
+    answer: "Josip Jović",
+    options: [
+      "Josip Jović",
+      "Marko Perković",
+      "Ante Gotovina",
+      "Mladen Markač",
+    ],
+  },
+  {
+    numb: 81,
+    question:
+      "Godine 1999., zbog izrazite raznolikosti krških fenomena, živog svijeta i iznimnih prirodnih ljepota na relativno malom prostoru, nacionalnim parkom proglašen je dio jedne planine. To je:",
+    answer: "Sjeverni Velebit",
+    options: ["Sjeverni Velebit", "Dinara", "Biokovo", "Risnjak"],
+  },
+  {
+    numb: 82,
+    question:
+      "Jedan od najznačajnijih hrvatskih književnika, autor brojnih romana, ciklusa drama o Glembajevima i Balada Petrice Kerempuha, je:",
+    answer: "Miroslav Krleža",
+    options: ["Miroslav Krleža", "August Šenoa", "Marin Držić", "Ivo Andrić"],
+  },
+  {
+    numb: 83,
+    question:
+      "Hrvatski ban, po čijem je imenu nazvan glavni trg u Gradu Zagrebu, zvao se:",
+    answer: "Josip Jelačić",
+    options: [
+      "Josip Jelačić",
+      "Petar Zrinski",
+      "Ivan Mažuranić",
+      "Ante Starčević",
+    ],
+  },
+  {
+    numb: 84,
+    question:
+      "Republika Hrvatska je članica zajednice europskih država koja se naziva:",
+    answer: "Europska unija",
+    options: ["Europska unija", "Schengenska zona", "Vijeće Europe", "NATO"],
+  },
+  {
+    numb: 85,
+    question:
+      "Ukrasni odjevni predmet, nosi se oko vrata, koji su nosili hrvatski vojnici u Tridesetogodišnjem ratu, nakon čega se njegovo korištenje proširilo većim dijelom Europe, je:",
+    answer: "Kravata",
+    options: ["Kravata", "Šal", "Marama", "Ovratnik"],
+  },
+  {
+    numb: 86,
+    question: "Eufrazijeva bazilika poznata je znamenitost grada u Istri:",
+    answer: "Poreč",
+    options: ["Poreč", "Rovinj", "Pula", "Umag"],
+  },
+  {
+    numb: 87,
+    question: "Vjekoslav Šutej bio je poznati hrvatski:",
+    answer: "Dirigent",
+    options: ["Dirigent", "Skladatelj", "Glazbenik", "Kantautor"],
+  },
+  {
+    numb: 88,
+    question:
+      "Tekst himne Republike Hrvatske »Lijepa naša domovino« napisao je ANTUN, a uglazbio JOSIP RUNJANIN.",
+    answer: "Antun Mihanović, Josip Runjanin",
+    options: [
+      "Antun Mihanović, Josip Runjanin",
+      "Ivan Zajc, Vatroslav Lisinski",
+      "Petar Preradović, Ivan Gundulić",
+      "Stanko Vraz, Franjo Kuhač",
+    ],
+  },
+  {
+    numb: 89,
+    question:
+      "Za predsjednika Republike Hrvatske ne može se biti biran više od:",
+    answer: "2 puta",
+    options: ["2 puta", "3 puta", "4 puta", "Ne postoji ograničenje"],
+  },
+  {
+    numb: 90,
+    question: "Koliko zastupnika može imati Hrvatski sabor?",
+    answer: "Najmanje 100, najviše 160",
+    options: [
+      "Najmanje 100, najviše 160",
+      "Najmanje 80, najviše 200",
+      "Najmanje 120, najviše 140",
+      "Najmanje 90, najviše 170",
+    ],
+  },
+  {
+    numb: 91,
+    question:
+      "Koja je tvrđava simbol hrvatske državnosti i pobjede u Domovinskom ratu?",
+    answer: "Kninska",
+    options: ["Kninska", "Medvedgrad", "Dubovačka", "Trakošćan"],
+  },
+  {
+    numb: 92,
+    question:
+      "Bitka protiv Osmanlija, u kojoj su poginuli mnogi pripadnici hrvatskog plemstva, zbila se 1493. godine u Lici, na:",
+    answer: "Krbavskom polju",
+    options: [
+      "Krbavskom polju",
+      "Vukovarskom polju",
+      "Cetinskom polju",
+      "Koranskom polju",
+    ],
+  },
+  {
+    numb: 93,
+    question:
+      "Zagrebački muzej, čiji se fundus temelji na donaciji privatne zbirke umjetnina poznatog kolekcionara, zove se:",
+    answer: "Muzej Mimara",
+    options: [
+      "Muzej Mimara",
+      "Arheološki muzej",
+      "Moderna galerija",
+      "Etnografski muzej",
+    ],
+  },
+  {
+    numb: 94,
+    question:
+      "Fabijan Šovagović, Boris Dvornik i Ivo Gregurević bili su poznati hrvatski:",
+    answer: "Glumci",
+    options: ["Glumci", "Skladatelji", "Redatelji", "Pisci"],
+  },
+  {
+    numb: 95,
+    question:
+      "Svjetski poznati izvozni proizvod hrvatske prehrambene industrije je začin:",
+    answer: "Vegeta",
+    options: ["Vegeta", "Paprika", "Origano", "Ružmarin"],
+  },
+  {
+    numb: 96,
+    question:
+      "Kako se zove najveći grad u Slavoniji na rijeci Dravi, čija je povijesna jezgra Tvrđa?",
+    answer: "Osijek",
+    options: ["Osijek", "Slavonski Brod", "Vinkovci", "Vukovar"],
+  },
+  {
+    numb: 98,
+    question:
+      "Najbolji igrač svijeta za 2018. godinu u izboru Međunarodne nogometne federacije (FIFA) i France Footballa je hrvatski nogometaš:",
+    answer: "Luka Modrić",
+    options: [
+      "Luka Modrić",
+      "Ivan Rakitić",
+      "Mario Mandžukić",
+      "Andrej Kramarić",
+    ],
+  },
+  {
+    numb: 99,
+    question:
+      "Poznatu slikarsku školu hrvatske naive osnovao je, u podravskom selu Hlebine, slikar:",
+    answer: "Krsto Hegedušić",
+    options: [
+      "Krsto Hegedušić",
+      "Ivan Generalić",
+      "Slavko Stolnik",
+      "Mijo Kovačić",
+    ],
+  },
+  {
+    numb: 100,
+    question:
+      "Hrvatski redatelj, scenarist, animator, crtač i karikaturist, koji je 1962. godine dobio Oscara za crtani film »Surogat« zvao se:",
+    answer: "Dušan Vukotić",
+    options: [
+      "Dušan Vukotić",
+      "Vatroslav Mimica",
+      "Nikola Tanhofer",
+      "Zlatko Grgić",
+    ],
+  },
 ];
 //selecting all required elements
 const start_btn = document.querySelector(".start_btn button");
@@ -204,7 +483,7 @@ const bottom_ques_counter = document.querySelector("footer .total_que");
 
 // if Next Que button clicked
 next_btn.onclick = () => {
-  console.log("next button");
+  console.log("next button clicked");
   if (que_count < questions.length - 1) {
     //if question count is less than total question length
     que_count++; //increment the que_count value
@@ -226,7 +505,7 @@ next_btn.onclick = () => {
 
 // getting questions and options from array
 function showQuetions(index) {
-  console.log(`show question ${questions[index].question}`);
+  console.log(`show question method //${questions[index].question}`);
   const que_text = document.querySelector(".que_text");
 
   //creating a new span and div tag for question and option and passing the value using array index
@@ -261,18 +540,20 @@ let crossIconTag = '<div class="icon cross"><i class="fas fa-times"></i></div>';
 
 //if user clicked on option
 function optionSelected(answer) {
-  console.log(`you selected / ${answer.textContent}`);
   clearInterval(counter); //clear counter
   clearInterval(counterLine); //clear counterLine
   let userAns = answer.textContent; //getting user selected option
   let correcAns = questions[que_count].answer; //getting correct answer from array
   const allOptions = option_list.children.length; //getting all option items
 
-  console.log(`optionSelected: ${answer.textContent}`);
+  console.log(`optionSelected: ${userAns}`);
+  console.log(`userAns === correcAns -> ${userAns === correcAns}`);
+  console.log(`userAns: ${userAns} \ncorrectAns: ${correcAns}`);
+  console.log(
+    `userAns is type of ${typeof userAns} \n correctAns is type ${typeof correcAns}`,
+  );
 
-  if (userAns === correcAns) {
-    console.log(`userAns ${userAns} | correctAns ${correcAns}`);
-
+  if (userAns.trim().toLowerCase() === correcAns.trim().toLowerCase()) {
     //if user selected option is equal to array's correct answer
     userScore += 1; //upgrading score value with 1
     answer.classList.add("correct"); //adding green color to correct selected option
@@ -282,12 +563,8 @@ function optionSelected(answer) {
   } else {
     answer.classList.add("incorrect"); //adding red color to correct selected option
     answer.insertAdjacentHTML("beforeend", crossIconTag); //adding cross icon to correct selected option
-    console.log(`userAns ${userAns} | correctAns ${correcAns}`);
-    console.log(
-      `userAns is type of ${typeof userAns} | correctAns is type ${typeof correcAns}`,
-    );
-    console.log("Wrong Answer");
 
+    console.log("Wrong Answer");
     for (i = 0; i < allOptions; i++) {
       if (option_list.children[i].textContent === correcAns) {
         //if there is an option which is matched to an array answer
