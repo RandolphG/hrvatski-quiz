@@ -1,81 +1,115 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Quiz</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="./favicon.ico" />
-    <link rel="apple-touch-icon-precomposed" href="./favicon.ico" />
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" href="./favicon.ico"/>
+    <link rel="apple-touch-icon-precomposed" href="./favicon.ico"/>
     <!-- FontAwesome CDN Link for Icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  </head>
-  <body>
-    <!-- start Quiz button -------------------------------------------------------------------------------------------->
-    <div class="start_btn"><button>Start Quiz</button></div>
-    <!-- Info Box ----------------------------------------------------------------------------------------------------->
-    <div class="info_box">
-      <div class="info-title">
+</head>
+<body>
+<!-- start Quiz button -------------------------------------------------------------------------------------------->
+<div class="start_btn">
+    <button>Start Quiz</button>
+</div>
+<!-- Info Box ----------------------------------------------------------------------------------------------------->
+<div class="info_box">
+    <div class="info-title">
         <span>Some Rules of this Quiz</span>
-      </div>
-      <div class="info-list">
+    </div>
+    <div class="info-list">
         <div class="info">
-          1. You will have only <span>30 seconds</span> per each question.
+            1. You will have only <span>30 seconds</span> per each question.
         </div>
         <div class="info">
-          2. Once you select your answer, it can't be undone.
+            2. Once you select your answer, it can't be undone.
         </div>
         <div class="info">
-          3. You can't select any option once time goes off.
+            3. You can't select any option once time goes off.
         </div>
         <div class="info">
-          4. You can't exit from the Quiz while you're playing.
+            4. You can't exit from the Quiz while you're playing.
         </div>
         <div class="info">
-          5. You'll get points on the basis of your correct answers.
+            5. You'll get points on the basis of your correct answers.
         </div>
-      </div>
-      <div class="buttons">
+    </div>
+    <div class="buttons">
+        <button class="scramble">Scramble game</button>
         <button class="quit">Exit Quiz</button>
         <button class="restart">Continue</button>
-      </div>
     </div>
-    <!-- Quiz Box ----------------------------------------------------------------------------------------------------->
-    <div class="quiz_box">
-      <header>
+</div>
+<!-- Quiz Box ----------------------------------------------------------------------------------------------------->
+<div class="quiz_box">
+    <header>
         <div class="title">Croatian Quiz - Multiple Choice</div>
         <div class="timer">
-          <div class="time_left_txt">Time Left</div>
-          <div class="timer_sec">30</div>
+            <div class="time_left_txt">Time Left</div>
+            <div class="timer_sec">30</div>
         </div>
         <div class="time_line"></div>
-      </header>
-      <section>
+    </header>
+    <section>
         <div class="que_text"></div>
         <div class="option_list"></div>
-      </section>
-      <footer>
+    </section>
+    <footer>
         <div class="total_que"></div>
         <button class="next_btn">Next Question</button>
-      </footer>
-    </div>
-    <!-- Result Box --------------------------------------------------------------------------------------------------->
-    <div class="result_box">
-      <div class="icon">
+    </footer>
+</div>
+<!-- Result Box --------------------------------------------------------------------------------------------------->
+<div class="result_box">
+    <div class="icon">
         <i class="fas fa-crown"></i>
-      </div>
-      <div class="complete_text">You've completed the Quiz!</div>
-      <div class="score_text"></div>
-      <div class="buttons">
+    </div>
+    <div class="complete_text">You've completed the Quiz!</div>
+    <div class="score_text"></div>
+    <div class="buttons">
         <button class="restart">Replay Quiz</button>
         <button class="quit">Quit Quiz</button>
-      </div>
     </div>
-  </body>
-  <script src="script.js"></script>
-  <script src="questions.js"></script>
-  <script>
-    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-  </script>
-  <script defer src="/_vercel/insights/script.js"></script>
+</div>
+<!-- Wrapper Box --------------------------------------------------------------------------------------------------->
+<div class="wrapper">
+    <div class="card">
+        <div class="me">
+            <div class="eye"></div>
+        </div>
+        <div class="text">
+            <button class="start-button">START</button>
+
+        </div>
+    </div>
+</div>
+<!-- Word Scramble Game Box --------------------------------------------------------------------------------------------------->
+<div class="game-body">
+<div class="container"><h2>Word Scramble</h2>
+    <div class="content"><p class="word"></p>
+        <div class="details"><p class="hint">Hint: <span></span></p>
+            <p class="time">Time Left: <span><b>30</b>s</span></p></div>
+        <label>
+            <input type="text" spellcheck="false" placeholder="Enter a valid word">
+        </label>
+        <div class="buttons">
+            <button class="quitScramble">Quit</button>
+            <button class="refresh-word">Refresh Word</button>
+            <button class="check-word">Check Word</button>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+<script src="profile.js"></script>
+<script src="script.js"></script>
+<script src="scrambleGame.js"></script>
+<script>
+    window.va = window.va || function () {
+        (window.vaq = window.vaq || []).push(arguments);
+    };
+</script>
 </html>
