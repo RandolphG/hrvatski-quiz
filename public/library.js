@@ -1,4 +1,474 @@
-let questions = [
+export const chapter_1_questions = [
+  {
+    gender: [
+      {
+        numb: 1,
+        question: "What is the gender of the Croatian word 'muškàrac' (man)?",
+        answer: "Masculine",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 2,
+        question: "What is the gender of the Croatian word 'sèlo' (village)?",
+        answer: "Neuter",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 3,
+        question: "What is the gender of the Croatian word 'žèna' (woman)?",
+        answer: "Feminine",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 4,
+        question: "What is the gender of the Croatian word 'òtac' (father)?",
+        answer: "Masculine",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 5,
+        question: "What is the gender of the Croatian word 'pìsmo' (letter)?",
+        answer: "Neuter",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 6,
+        question: "What is the gender of the Croatian word 'majka' (mother)?",
+        answer: "Feminine",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 7,
+        question: "What is the gender of the Croatian word 'brat' (brother)?",
+        answer: "Masculine",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 8,
+        question: "What is the gender of the Croatian word 'pivo' (beer)?",
+        answer: "Neuter",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 9,
+        question: "What is the gender of the Croatian word 'sèstra' (sister)?",
+        answer: "Feminine",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 10,
+        question: "What is the gender of the Croatian word 'Jòvan' (name)?",
+        answer: "Masculine",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 11,
+        question: "What is the gender of the Croatian word 'grlo' (throat)?",
+        answer: "Neuter",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 12,
+        question: "What is the gender of the Croatian word 'Màra' (name)?",
+        answer: "Feminine",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 13,
+        question: "What is the gender of the Croatian word 'pas' (dog)?",
+        answer: "Masculine",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 14,
+        question: "What is the gender of the Croatian word 'more' (sea)?",
+        answer: "Neuter",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 15,
+        question: "What is the gender of the Croatian word 'mačka' (cat)?",
+        answer: "Feminine",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 16,
+        question: "What is the gender of the Croatian word 'pròzor' (window)?",
+        answer: "Masculine",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 17,
+        question:
+          "What is the gender of the Croatian word 'pìtanje' (question)?",
+        answer: "Neuter",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 18,
+        question: "What is the gender of the Croatian word 'kuća' (house)?",
+        answer: "Feminine",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 19,
+        question: "What is the gender of the Croatian word 'pàpir' (paper)?",
+        answer: "Masculine",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 20,
+        question: "What is the gender of the Croatian word 'polje' (field)?",
+        answer: "Neuter",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 21,
+        question: "What is the gender of the Croatian word 'òlovka' (pencil)?",
+        answer: "Feminine",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+    ],
+    nouns_of_professions_and_nationalities: [
+      {
+        numb: 1,
+        question:
+          "What is the gender of the Croatian word 'stùdent' (university student)?",
+        answer: "Masculine",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 2,
+        question:
+          "What is the gender of the Croatian word 'stùdentica' (university student, female)?",
+        answer: "Feminine",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 3,
+        question:
+          "What is the gender of the Croatian word 'profesor' (professor, teacher)?",
+        answer: "Masculine",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 4,
+        question:
+          "What is the gender of the Croatian word 'profesòrica' (professor, teacher, female)?",
+        answer: "Feminine",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 5,
+        question:
+          "What is the gender of the Croatian word 'nàstavnik' (teacher, instructor)?",
+        answer: "Masculine",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 6,
+        question:
+          "What is the gender of the Croatian word 'nàstavnica' (teacher, instructor, female)?",
+        answer: "Feminine",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 7,
+        question:
+          "What is the gender of the Croatian word 'učenik' (student, pupil)?",
+        answer: "Masculine",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 8,
+        question:
+          "What is the gender of the Croatian word 'učenica' (student, pupil, female)?",
+        answer: "Feminine",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 9,
+        question:
+          "What is the gender of the Croatian word 'Amerikànac' (American, male)?",
+        answer: "Masculine",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 10,
+        question:
+          "What is the gender of the Croatian word 'Amerìkanka' (American, female)?",
+        answer: "Feminine",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 11,
+        question:
+          "What is the gender of the Croatian word 'Ènglez' (Englishman)?",
+        answer: "Masculine",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 12,
+        question:
+          "What is the gender of the Croatian word 'Èngleskinja' (Englishwoman)?",
+        answer: "Feminine",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 13,
+        question:
+          "What is the gender of the Croatian word 'Bosànac' (Bosnian, male)?",
+        answer: "Masculine",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 14,
+        question:
+          "What is the gender of the Croatian word 'Bòsanka' (Bosnian, female)?",
+        answer: "Feminine",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 15,
+        question:
+          "What is the gender of the Croatian word 'Hr̀vat' (Croat, male)?",
+        answer: "Masculine",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 16,
+        question:
+          "What is the gender of the Croatian word 'Hrvàtica' (Croat, female)?",
+        answer: "Feminine",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 17,
+        question:
+          "What is the gender of the Croatian word 'Srbin' (Serb, male)?",
+        answer: "Masculine",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 18,
+        question:
+          "What is the gender of the Croatian word 'Srpkinja' (Serb, female)?",
+        answer: "Feminine",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 19,
+        question:
+          "What is the gender of the Croatian word 'Crnògorac' (Montenegrin, male)?",
+        answer: "Masculine",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+      {
+        numb: 20,
+        question:
+          "What is the gender of the Croatian word 'Crnògorka' (Montenegrin, female)?",
+        answer: "Feminine",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+    ],
+    verb_biti: [
+      {
+        numb: 1,
+        question:
+          "What is the full form of the 1st person singular present tense of the verb 'biti'?",
+        answer: "jesam",
+        options: ["jesam", "sam", "nisi"],
+      },
+      {
+        numb: 2,
+        question:
+          "What is the clitic form of the 2nd person singular present tense of the verb 'biti'?",
+        answer: "si",
+        options: ["si", "jesi", "nisi"],
+      },
+      {
+        numb: 3,
+        question:
+          "What is the negated form of the 3rd person plural present tense of the verb 'biti'?",
+        answer: "nisu",
+        options: ["nisu", "niće", "jesu"],
+      },
+      {
+        numb: 4,
+        question:
+          "What is the full form of the 2nd person plural present tense of the verb 'biti'?",
+        answer: "jeste",
+        options: ["jeste", "ste", "jesmo"],
+      },
+      {
+        numb: 5,
+        question:
+          "What is the negated form of the 1st person plural present tense of the verb 'biti'?",
+        answer: "nismo",
+        options: ["nismo", "jesmo", "nije"],
+      },
+      {
+        numb: 6,
+        question:
+          "What is the clitic form of the 3rd person singular present tense of the verb 'biti'?",
+        answer: "je",
+        options: ["je", "jest", "jesu"],
+      },
+      {
+        numb: 7,
+        question:
+          "Which form of the 3rd person singular full form is more commonly used in Croatian?",
+        answer: "jest",
+        options: ["jest", "jeste", "jesu"],
+      },
+      {
+        numb: 8,
+        question:
+          "What is the full form of the 3rd person plural present tense of the verb 'biti'?",
+        answer: "jesu",
+        options: ["jesu", "jesmo", "jeste"],
+      },
+      {
+        numb: 9,
+        question:
+          "What is the negated form of the 3rd person singular present tense of the verb 'biti'?",
+        answer: "nije",
+        options: ["nije", "nisam", "niće"],
+      },
+      {
+        numb: 10,
+        question:
+          "What prefix is added to the clitic form to create negated forms of the verb 'biti'?",
+        answer: "ni-",
+        options: ["ni-", "je-", "ne-"],
+      },
+    ],
+    yes_no_questions: [
+      {
+        numb: 1,
+        question: "_____ li vi stùdent?",
+        answer: "Jèste",
+        options: ["Jèste", "je", "jesmo", "jesu", "jest"],
+      },
+      {
+        numb: 2,
+        question: "_____ li òni Amerikànci?",
+        answer: "Jèsu",
+        options: ["Jèsu", "jeste", "jesmo", "je", "jest"],
+      },
+      {
+        numb: 3,
+        question: "_____ li ovo tvoje pìsmo?",
+        answer: "Je",
+        options: ["Je", "jest", "jesu", "jeste", "jesmo"],
+      },
+      {
+        numb: 4,
+        question: "_____ li ti Bosanac?",
+        answer: "Jesi",
+        options: ["Jesi", "je", "jesu", "jesmo", "jest"],
+      },
+      {
+        numb: 5,
+        question: "_____ li mi spremni?",
+        answer: "Jesmo",
+        options: ["Jesmo", "jeste", "jesu", "je", "jest"],
+      },
+      {
+        numb: 6,
+        question: "_____ li ti profesor?",
+        answer: "Jesi",
+        options: ["Jesi", "jesu", "jesmo", "je", "jeste"],
+      },
+      {
+        numb: 7,
+        question: "_____ li ona Hrvatica?",
+        answer: "Je",
+        options: ["Je", "jest", "jesmo", "jesu", "jeste"],
+      },
+      {
+        numb: 8,
+        question: "_____ li vi iz Zagreba?",
+        answer: "Jeste",
+        options: ["Jeste", "jesmo", "jesu", "je", "jest"],
+      },
+      {
+        numb: 9,
+        question: "_____ li ovi ljudi u školi?",
+        answer: "Jèsu",
+        options: ["Jèsu", "jesmo", "jeste", "je", "jest"],
+      },
+      {
+        numb: 10,
+        question: "_____ li ovo vaša kuća?",
+        answer: "Je",
+        options: ["Je", "jeste", "jesmo", "jesu", "jest"],
+      },
+      {
+        numb: 11,
+        question: "_____ li oni prijatelji?",
+        answer: "Jèsu",
+        options: ["Jèsu", "jeste", "jesmo", "je", "jesi"],
+      },
+      {
+        numb: 12,
+        question: "_____ li vi na večeri?",
+        answer: "Jeste",
+        options: ["Jeste", "jesmo", "jesu", "je", "jesi"],
+      },
+      {
+        numb: 13,
+        question: "_____ li ja spreman za test?",
+        answer: "Jesam",
+        options: ["Jesam", "jesi", "jesmo", "jesu", "je"],
+      },
+      {
+        numb: 14,
+        question: "_____ li njih dvoje studenti?",
+        answer: "Jèsu",
+        options: ["Jèsu", "jesmo", "jeste", "je", "jest"],
+      },
+      {
+        numb: 15,
+        question: "_____ li ona profesorica?",
+        answer: "Je",
+        options: ["Je", "jeste", "jesmo", "jesu", "jesi"],
+      },
+      {
+        numb: 16,
+        question: "_____ li ovo vaše knjige?",
+        answer: "Je",
+        options: ["Je", "jesu", "jesmo", "jeste", "jesi"],
+      },
+      {
+        numb: 17,
+        question: "_____ li mi sretni?",
+        answer: "Jesmo",
+        options: ["Jesmo", "jesu", "jeste", "je", "jesi"],
+      },
+      {
+        numb: 18,
+        question: "_____ li vi umorni?",
+        answer: "Jeste",
+        options: ["Jeste", "jesu", "jesmo", "je", "jesi"],
+      },
+      {
+        numb: 19,
+        question: "_____ li ovi ljudi iz Hrvatske?",
+        answer: "Jèsu",
+        options: ["Jèsu", "jesmo", "jeste", "je", "jesi"],
+      },
+      {
+        numb: 20,
+        question: "_____ li on iz Beograda?",
+        answer: "Je",
+        options: ["Je", "jesu", "jeste", "jesmo", "jesi"],
+      },
+    ],
+  },
+];
+
+export const mup_questions = [
   {
     numb: 1,
     question: "Nositelj zakonodavne vlasti u Republici Hrvatskoj je:",
@@ -1001,202 +1471,467 @@ let questions = [
   },
 ];
 
-// DOM Elements
-const dom = {
-  startBtn: document.querySelector(".start_btn button"),
-  infoBox: document.querySelector(".info_box"),
-  exitBtn: document.querySelector(".info_box .quit"),
-  continueBtn: document.querySelector(".info_box .restart"),
-  quizBox: document.querySelector(".quiz_box"),
-  resultBox: document.querySelector(".result_box"),
-  optionList: document.querySelector(".option_list"),
-  timeLine: document.querySelector("header .time_line"),
-  timeText: document.querySelector(".timer .time_left_txt"),
-  timeCount: document.querySelector(".timer .timer_sec"),
-  restartQuizBtn: document.querySelector(".result_box .restart"),
-  quitQuizBtn: document.querySelector(".result_box .quit"),
-  nextBtn: document.querySelector("footer .next_btn"),
-  bottomQuestionCounter: document.querySelector("footer .total_que"),
-};
+export const gender_questions = [
+  {
+    numb: 1,
+    question: "What is the gender of the Croatian word 'muškàrac' (man)?",
+    answer: "Masculine",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 2,
+    question: "What is the gender of the Croatian word 'sèlo' (village)?",
+    answer: "Neuter",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 3,
+    question: "What is the gender of the Croatian word 'žèna' (woman)?",
+    answer: "Feminine",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 4,
+    question: "What is the gender of the Croatian word 'òtac' (father)?",
+    answer: "Masculine",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 5,
+    question: "What is the gender of the Croatian word 'pìsmo' (letter)?",
+    answer: "Neuter",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 6,
+    question: "What is the gender of the Croatian word 'majka' (mother)?",
+    answer: "Feminine",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 7,
+    question: "What is the gender of the Croatian word 'brat' (brother)?",
+    answer: "Masculine",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 8,
+    question: "What is the gender of the Croatian word 'pivo' (beer)?",
+    answer: "Neuter",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 9,
+    question: "What is the gender of the Croatian word 'sèstra' (sister)?",
+    answer: "Feminine",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 10,
+    question: "What is the gender of the Croatian word 'Jòvan' (name)?",
+    answer: "Masculine",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 11,
+    question: "What is the gender of the Croatian word 'grlo' (throat)?",
+    answer: "Neuter",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 12,
+    question: "What is the gender of the Croatian word 'Màra' (name)?",
+    answer: "Feminine",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 13,
+    question: "What is the gender of the Croatian word 'pas' (dog)?",
+    answer: "Masculine",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 14,
+    question: "What is the gender of the Croatian word 'more' (sea)?",
+    answer: "Neuter",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 15,
+    question: "What is the gender of the Croatian word 'mačka' (cat)?",
+    answer: "Feminine",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 16,
+    question: "What is the gender of the Croatian word 'pròzor' (window)?",
+    answer: "Masculine",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 17,
+    question: "What is the gender of the Croatian word 'pìtanje' (question)?",
+    answer: "Neuter",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 18,
+    question: "What is the gender of the Croatian word 'kuća' (house)?",
+    answer: "Feminine",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 19,
+    question: "What is the gender of the Croatian word 'pàpir' (paper)?",
+    answer: "Masculine",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 20,
+    question: "What is the gender of the Croatian word 'polje' (field)?",
+    answer: "Neuter",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 21,
+    question: "What is the gender of the Croatian word 'òlovka' (pencil)?",
+    answer: "Feminine",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+];
 
-// State
-const state = {
-  timeValue: 30,
-  questionIndex: 0,
-  questionNumber: 1,
-  userScore: 0,
-  timer: null,
-  timerLine: null,
-  lineWidth: 0,
-};
+export const nouns_of_professions_and_nationalities = [
+  {
+    numb: 1,
+    question:
+      "What is the gender of the Croatian word 'stùdent' (university student)?",
+    answer: "Masculine",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 2,
+    question:
+      "What is the gender of the Croatian word 'stùdentica' (university student, female)?",
+    answer: "Feminine",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 3,
+    question:
+      "What is the gender of the Croatian word 'profesor' (professor, teacher)?",
+    answer: "Masculine",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 4,
+    question:
+      "What is the gender of the Croatian word 'profesòrica' (professor, teacher, female)?",
+    answer: "Feminine",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 5,
+    question:
+      "What is the gender of the Croatian word 'nàstavnik' (teacher, instructor)?",
+    answer: "Masculine",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 6,
+    question:
+      "What is the gender of the Croatian word 'nàstavnica' (teacher, instructor, female)?",
+    answer: "Feminine",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 7,
+    question:
+      "What is the gender of the Croatian word 'učenik' (student, pupil)?",
+    answer: "Masculine",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 8,
+    question:
+      "What is the gender of the Croatian word 'učenica' (student, pupil, female)?",
+    answer: "Feminine",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 9,
+    question:
+      "What is the gender of the Croatian word 'Amerikànac' (American, male)?",
+    answer: "Masculine",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 10,
+    question:
+      "What is the gender of the Croatian word 'Amerìkanka' (American, female)?",
+    answer: "Feminine",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 11,
+    question: "What is the gender of the Croatian word 'Ènglez' (Englishman)?",
+    answer: "Masculine",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 12,
+    question:
+      "What is the gender of the Croatian word 'Èngleskinja' (Englishwoman)?",
+    answer: "Feminine",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 13,
+    question:
+      "What is the gender of the Croatian word 'Bosànac' (Bosnian, male)?",
+    answer: "Masculine",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 14,
+    question:
+      "What is the gender of the Croatian word 'Bòsanka' (Bosnian, female)?",
+    answer: "Feminine",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 15,
+    question: "What is the gender of the Croatian word 'Hr̀vat' (Croat, male)?",
+    answer: "Masculine",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 16,
+    question:
+      "What is the gender of the Croatian word 'Hrvàtica' (Croat, female)?",
+    answer: "Feminine",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 17,
+    question: "What is the gender of the Croatian word 'Srbin' (Serb, male)?",
+    answer: "Masculine",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 18,
+    question:
+      "What is the gender of the Croatian word 'Srpkinja' (Serb, female)?",
+    answer: "Feminine",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 19,
+    question:
+      "What is the gender of the Croatian word 'Crnògorac' (Montenegrin, male)?",
+    answer: "Masculine",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+  {
+    numb: 20,
+    question:
+      "What is the gender of the Croatian word 'Crnògorka' (Montenegrin, female)?",
+    answer: "Feminine",
+    options: ["Masculine", "Feminine", "Neuter"],
+  },
+];
 
-// Event Handlers
-const handleStartQuiz = () => dom.infoBox.classList.add("activeInfo");
-const handleExitQuiz = () => dom.infoBox.classList.remove("activeInfo");
+export const verb_biti = [
+  {
+    numb: 1,
+    question:
+      "What is the full form of the 1st person singular present tense of the verb 'biti'?",
+    answer: "jesam",
+    options: ["jesam", "sam", "nisi"],
+  },
+  {
+    numb: 2,
+    question:
+      "What is the clitic form of the 2nd person singular present tense of the verb 'biti'?",
+    answer: "si",
+    options: ["si", "jesi", "nisi"],
+  },
+  {
+    numb: 3,
+    question:
+      "What is the negated form of the 3rd person plural present tense of the verb 'biti'?",
+    answer: "nisu",
+    options: ["nisu", "niće", "jesu"],
+  },
+  {
+    numb: 4,
+    question:
+      "What is the full form of the 2nd person plural present tense of the verb 'biti'?",
+    answer: "jeste",
+    options: ["jeste", "ste", "jesmo"],
+  },
+  {
+    numb: 5,
+    question:
+      "What is the negated form of the 1st person plural present tense of the verb 'biti'?",
+    answer: "nismo",
+    options: ["nismo", "jesmo", "nije"],
+  },
+  {
+    numb: 6,
+    question:
+      "What is the clitic form of the 3rd person singular present tense of the verb 'biti'?",
+    answer: "je",
+    options: ["je", "jest", "jesu"],
+  },
+  {
+    numb: 7,
+    question:
+      "Which form of the 3rd person singular full form is more commonly used in Croatian?",
+    answer: "jest",
+    options: ["jest", "jeste", "jesu"],
+  },
+  {
+    numb: 8,
+    question:
+      "What is the full form of the 3rd person plural present tense of the verb 'biti'?",
+    answer: "jesu",
+    options: ["jesu", "jesmo", "jeste"],
+  },
+  {
+    numb: 9,
+    question:
+      "What is the negated form of the 3rd person singular present tense of the verb 'biti'?",
+    answer: "nije",
+    options: ["nije", "nisam", "niće"],
+  },
+  {
+    numb: 10,
+    question:
+      "What prefix is added to the clitic form to create negated forms of the verb 'biti'?",
+    answer: "ni-",
+    options: ["ni-", "je-", "ne-"],
+  },
+];
 
-const handleContinueQuiz = () => {
-  dom.infoBox.classList.remove("activeInfo");
-  dom.quizBox.classList.add("activeQuiz");
-  resetState();
-  startQuiz();
-};
-
-const handleRestartQuiz = () => {
-  dom.quizBox.classList.add("activeQuiz");
-  dom.resultBox.classList.remove("activeResult");
-  resetState();
-  startQuiz();
-};
-
-const handleQuitQuiz = () => window.location.reload();
-
-const handleNextQuestion = () => {
-  if (state.questionIndex < questions.length - 1) {
-    state.questionIndex++;
-    state.questionNumber++;
-    updateQuizState();
-  } else {
-    endQuiz();
-  }
-};
-
-// Functions
-const resetState = () => {
-  Object.assign(state, {
-    timeValue: 30,
-    questionIndex: 0,
-    questionNumber: 1,
-    userScore: 0,
-    lineWidth: 0,
-  });
-  clearTimers();
-};
-
-const startQuiz = () => {
-  showQuestion(state.questionIndex);
-  updateQuestionCounter(state.questionNumber);
-  startTimer(state.timeValue);
-  startTimerLine(state.lineWidth);
-};
-
-const clearTimers = () => {
-  clearInterval(state.timer);
-  clearInterval(state.timerLine);
-};
-
-const updateQuizState = () => {
-  clearTimers();
-  showQuestion(state.questionIndex);
-  updateQuestionCounter(state.questionNumber);
-  startTimer(state.timeValue);
-  startTimerLine(state.lineWidth);
-};
-
-const showQuestion = (index) => {
-  const question = questions[index];
-  dom.optionList.innerHTML = question.options
-    .map(
-      (option, i) =>
-        `<div class="option" onclick="handleOptionSelect(${i})"><span>${option}</span></div>`,
-    )
-    .join("");
-  document.querySelector(".que_text").innerHTML =
-    `<span>${question.numb}. ${question.question}</span>`;
-};
-
-const handleOptionSelect = (index) => {
-  const userAns = questions[state.questionIndex].options[index];
-  const correctAns = questions[state.questionIndex].answer;
-  const isCorrect =
-    userAns.trim().toLowerCase() === correctAns.trim().toLowerCase();
-
-  updateOptionStyles(index, isCorrect);
-  state.userScore += isCorrect ? 1 : 0;
-
-  dom.nextBtn.classList.add("show");
-  clearTimers();
-};
-
-const updateOptionStyles = (selectedIndex, isCorrect) => {
-  const options = dom.optionList.children;
-  Array.from(options).forEach((option, i) => {
-    const isAnswer =
-      questions[state.questionIndex].options[i].trim().toLowerCase() ===
-      questions[state.questionIndex].answer.trim().toLowerCase();
-    option.classList.add(
-      i === selectedIndex
-        ? isCorrect
-          ? "correct"
-          : "incorrect"
-        : isAnswer
-          ? "correct"
-          : "disabled",
-    );
-  });
-};
-
-const startTimer = (time) => {
-  state.timer = setInterval(() => {
-    dom.timeCount.textContent = time > 9 ? time : "0" + time;
-    if (--time < 0) {
-      clearTimers();
-      handleTimeout();
-    }
-  }, 1000);
-};
-
-const startTimerLine = (time) => {
-  state.timerLine = setInterval(() => {
-    time++;
-    dom.timeLine.style.width = time + "px";
-    if (time > 549) clearTimers();
-  }, 57);
-};
-
-const handleTimeout = () => {
-  dom.timeText.textContent = "Time Off";
-  autoSelectCorrectAnswer();
-  dom.nextBtn.classList.add("show");
-};
-
-const autoSelectCorrectAnswer = () => {
-  const options = dom.optionList.children;
-  Array.from(options).forEach((option) => {
-    if (
-      option.textContent.trim().toLowerCase() ===
-      questions[state.questionIndex].answer.trim().toLowerCase()
-    ) {
-      option.classList.add("correct");
-    }
-    option.classList.add("disabled");
-  });
-};
-
-const updateQuestionCounter = (index) => {
-  dom.bottomQuestionCounter.innerHTML = `<span><p>${index}</p> of <p>${questions.length}</p> Questions</span>`;
-};
-
-const endQuiz = () => {
-  dom.quizBox.classList.remove("activeQuiz");
-  dom.resultBox.classList.add("activeResult");
-  showResult();
-};
-
-const showResult = () => {
-  const scoreTag =
-    state.userScore > 3
-      ? `Congrats! 🎉 You got <p>${state.userScore}</p> out of <p>${questions.length}</p>`
-      : state.userScore > 1
-        ? `Nice! 😎 You got <p>${state.userScore}</p> out of <p>${questions.length}</p>`
-        : `Sorry 😐 You got <p>${state.userScore}</p> out of <p>${questions.length}</p>`;
-  dom.resultBox.querySelector(".score_text").innerHTML =
-    `<span>${scoreTag}</span>`;
-};
-
-// Event Listeners
-dom.startBtn.addEventListener("click", handleStartQuiz);
-dom.exitBtn.addEventListener("click", handleExitQuiz);
-dom.continueBtn.addEventListener("click", handleContinueQuiz);
-dom.restartQuizBtn.addEventListener("click", handleRestartQuiz);
-dom.quitQuizBtn.addEventListener("click", handleQuitQuiz);
-dom.nextBtn.addEventListener("click", handleNextQuestion);
+export const yes_no_questions = [
+  {
+    numb: 1,
+    question: "_____ li vi stùdent?",
+    answer: "Jèste",
+    options: ["Jèste", "je", "jesmo", "jesu", "jest"],
+  },
+  {
+    numb: 2,
+    question: "_____ li òni Amerikànci?",
+    answer: "Jèsu",
+    options: ["Jèsu", "jeste", "jesmo", "je", "jest"],
+  },
+  {
+    numb: 3,
+    question: "_____ li ovo tvoje pìsmo?",
+    answer: "Je",
+    options: ["Je", "jest", "jesu", "jeste", "jesmo"],
+  },
+  {
+    numb: 4,
+    question: "_____ li ti Bosanac?",
+    answer: "Jesi",
+    options: ["Jesi", "je", "jesu", "jesmo", "jest"],
+  },
+  {
+    numb: 5,
+    question: "_____ li mi spremni?",
+    answer: "Jesmo",
+    options: ["Jesmo", "jeste", "jesu", "je", "jest"],
+  },
+  {
+    numb: 6,
+    question: "_____ li ti profesor?",
+    answer: "Jesi",
+    options: ["Jesi", "jesu", "jesmo", "je", "jeste"],
+  },
+  {
+    numb: 7,
+    question: "_____ li ona Hrvatica?",
+    answer: "Je",
+    options: ["Je", "jest", "jesmo", "jesu", "jeste"],
+  },
+  {
+    numb: 8,
+    question: "_____ li vi iz Zagreba?",
+    answer: "Jeste",
+    options: ["Jeste", "jesmo", "jesu", "je", "jest"],
+  },
+  {
+    numb: 9,
+    question: "_____ li ovi ljudi u školi?",
+    answer: "Jèsu",
+    options: ["Jèsu", "jesmo", "jeste", "je", "jest"],
+  },
+  {
+    numb: 10,
+    question: "_____ li ovo vaša kuća?",
+    answer: "Je",
+    options: ["Je", "jeste", "jesmo", "jesu", "jest"],
+  },
+  {
+    numb: 11,
+    question: "_____ li oni prijatelji?",
+    answer: "Jèsu",
+    options: ["Jèsu", "jeste", "jesmo", "je", "jesi"],
+  },
+  {
+    numb: 12,
+    question: "_____ li vi na večeri?",
+    answer: "Jeste",
+    options: ["Jeste", "jesmo", "jesu", "je", "jesi"],
+  },
+  {
+    numb: 13,
+    question: "_____ li ja spreman za test?",
+    answer: "Jesam",
+    options: ["Jesam", "jesi", "jesmo", "jesu", "je"],
+  },
+  {
+    numb: 14,
+    question: "_____ li njih dvoje studenti?",
+    answer: "Jèsu",
+    options: ["Jèsu", "jesmo", "jeste", "je", "jest"],
+  },
+  {
+    numb: 15,
+    question: "_____ li ona profesorica?",
+    answer: "Je",
+    options: ["Je", "jeste", "jesmo", "jesu", "jesi"],
+  },
+  {
+    numb: 16,
+    question: "_____ li ovo vaše knjige?",
+    answer: "Je",
+    options: ["Je", "jesu", "jesmo", "jeste", "jesi"],
+  },
+  {
+    numb: 17,
+    question: "_____ li mi sretni?",
+    answer: "Jesmo",
+    options: ["Jesmo", "jesu", "jeste", "je", "jesi"],
+  },
+  {
+    numb: 18,
+    question: "_____ li vi umorni?",
+    answer: "Jeste",
+    options: ["Jeste", "jesu", "jesmo", "je", "jesi"],
+  },
+  {
+    numb: 19,
+    question: "_____ li ovi ljudi iz Hrvatske?",
+    answer: "Jèsu",
+    options: ["Jèsu", "jesmo", "jeste", "je", "jesi"],
+  },
+  {
+    numb: 20,
+    question: "_____ li on iz Beograda?",
+    answer: "Je",
+    options: ["Je", "jesu", "jeste", "jesmo", "jesi"],
+  },
+];

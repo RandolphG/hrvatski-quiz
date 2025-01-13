@@ -1,134 +1,7 @@
-let chapter_1_chapter_1_questions = [
-  {
-    numb: 1,
-    question: "What is the gender of the Croatian word 'muškàrac' (man)?",
-    answer: "Masculine",
-    options: ["Masculine", "Feminine", "Neuter"],
-  },
-  {
-    numb: 2,
-    question: "What is the gender of the Croatian word 'sèlo' (village)?",
-    answer: "Neuter",
-    options: ["Masculine", "Feminine", "Neuter"],
-  },
-  {
-    numb: 3,
-    question: "What is the gender of the Croatian word 'žèna' (woman)?",
-    answer: "Feminine",
-    options: ["Masculine", "Feminine", "Neuter"],
-  },
-  {
-    numb: 4,
-    question: "What is the gender of the Croatian word 'òtac' (father)?",
-    answer: "Masculine",
-    options: ["Masculine", "Feminine", "Neuter"],
-  },
-  {
-    numb: 5,
-    question: "What is the gender of the Croatian word 'pìsmo' (letter)?",
-    answer: "Neuter",
-    options: ["Masculine", "Feminine", "Neuter"],
-  },
-  {
-    numb: 6,
-    question: "What is the gender of the Croatian word 'majka' (mother)?",
-    answer: "Feminine",
-    options: ["Masculine", "Feminine", "Neuter"],
-  },
-  {
-    numb: 7,
-    question: "What is the gender of the Croatian word 'brat' (brother)?",
-    answer: "Masculine",
-    options: ["Masculine", "Feminine", "Neuter"],
-  },
-  {
-    numb: 8,
-    question: "What is the gender of the Croatian word 'pivo' (beer)?",
-    answer: "Neuter",
-    options: ["Masculine", "Feminine", "Neuter"],
-  },
-  {
-    numb: 9,
-    question: "What is the gender of the Croatian word 'sèstra' (sister)?",
-    answer: "Feminine",
-    options: ["Masculine", "Feminine", "Neuter"],
-  },
-  {
-    numb: 10,
-    question: "What is the gender of the Croatian word 'Jòvan' (name)?",
-    answer: "Masculine",
-    options: ["Masculine", "Feminine", "Neuter"],
-  },
-  {
-    numb: 11,
-    question: "What is the gender of the Croatian word 'grlo' (throat)?",
-    answer: "Neuter",
-    options: ["Masculine", "Feminine", "Neuter"],
-  },
-  {
-    numb: 12,
-    question: "What is the gender of the Croatian word 'Màra' (name)?",
-    answer: "Feminine",
-    options: ["Masculine", "Feminine", "Neuter"],
-  },
-  {
-    numb: 13,
-    question: "What is the gender of the Croatian word 'pas' (dog)?",
-    answer: "Masculine",
-    options: ["Masculine", "Feminine", "Neuter"],
-  },
-  {
-    numb: 14,
-    question: "What is the gender of the Croatian word 'more' (sea)?",
-    answer: "Neuter",
-    options: ["Masculine", "Feminine", "Neuter"],
-  },
-  {
-    numb: 15,
-    question: "What is the gender of the Croatian word 'mačka' (cat)?",
-    answer: "Feminine",
-    options: ["Masculine", "Feminine", "Neuter"],
-  },
-  {
-    numb: 16,
-    question: "What is the gender of the Croatian word 'pròzor' (window)?",
-    answer: "Masculine",
-    options: ["Masculine", "Feminine", "Neuter"],
-  },
-  {
-    numb: 17,
-    question: "What is the gender of the Croatian word 'pìtanje' (question)?",
-    answer: "Neuter",
-    options: ["Masculine", "Feminine", "Neuter"],
-  },
-  {
-    numb: 18,
-    question: "What is the gender of the Croatian word 'kuća' (house)?",
-    answer: "Feminine",
-    options: ["Masculine", "Feminine", "Neuter"],
-  },
-  {
-    numb: 19,
-    question: "What is the gender of the Croatian word 'pàpir' (paper)?",
-    answer: "Masculine",
-    options: ["Masculine", "Feminine", "Neuter"],
-  },
-  {
-    numb: 20,
-    question: "What is the gender of the Croatian word 'polje' (field)?",
-    answer: "Neuter",
-    options: ["Masculine", "Feminine", "Neuter"],
-  },
-  {
-    numb: 21,
-    question: "What is the gender of the Croatian word 'òlovka' (pencil)?",
-    answer: "Feminine",
-    options: ["Masculine", "Feminine", "Neuter"],
-  },
-];
-
-class Quiz {
-  constructor(questions) {
+export default class Quiz {
+  constructor(questions, quizData) {
+    this.questions = questions;
+    this.data = quizData; // Store the quizData object
     this.questions = questions;
     this.timeValue = 30;
     this.queCount = 0;
@@ -155,6 +28,9 @@ class Quiz {
     this.bottomQueCounter = document.querySelector("footer .total_que");
     this.totalTimeDiv = this.createTotalTimeElement(); // Create total time element
 
+    // Example: Increment a specific test count
+    this.incrementTestCount("yesNoTest");
+
     this.init();
   }
 
@@ -168,6 +44,20 @@ class Quiz {
       this.restartQuiz();
     this.resultBox.querySelector(".buttons .quit").onclick = () =>
       window.location.reload();
+  }
+
+  incrementTestCount(testName) {
+    if (!this.data.testCounts[testName]) {
+      this.data.testCounts[testName] = 0;
+    }
+    this.data.testCounts[testName]++;
+
+    // Save updated data to local storage
+    this.saveQuizData();
+  }
+
+  saveQuizData() {
+    localStorage.setItem("quizData", JSON.stringify(this.data));
   }
 
   createTotalTimeElement() {
@@ -225,8 +115,11 @@ class Quiz {
     const queText = document.querySelector(".que_text");
     const question = this.questions[index];
 
+    // Shuffle the options array
+    const shuffledOptions = question.options.sort(() => Math.random() - 0.5);
+
     let queTag = `<span>${question.numb} ${question.question}</span>`;
-    let optionTag = question.options
+    let optionTag = shuffledOptions
       .map((option) => `<div class="option"><span>${option}</span></div>`)
       .join("");
 
@@ -271,15 +164,24 @@ class Quiz {
   }
 
   updateQuestionCounter(index) {
-    this.bottomQueCounter.innerHTML = `<span><p>${index}</p> of <p>${this.questions.length}</p> Questions | Errors: <p>${this.errorTotal}</p></span>`;
+    this.bottomQueCounter.innerHTML = `
+        <span>
+            <p>${index}</p> of <p>${this.questions.length}</p> Questions | Errors: <p>${this.errorTotal}</p>
+        </span>`;
   }
 
   getTickIcon() {
-    return '<div class="icon tick"><i class="fas fa-check"></i></div>';
+    return `
+        <div class="icon tick">
+            <i class="fas fa-check"></i>
+        </div>`;
   }
 
   getCrossIcon() {
-    return '<div class="icon cross"><i class="fas fa-times"></i></div>';
+    return `
+        <div class="icon cross">
+            <i class="fas fa-times"></i>
+        </div>`;
   }
 
   nextQuestion() {
@@ -330,7 +232,7 @@ class Quiz {
     this.infoBox.classList.remove("activeInfo");
     this.quizBox.classList.remove("activeQuiz");
     this.resultBox.classList.add("activeResult");
-
+    15;
     // Stop total time counter when quiz ends
     this.stopTotalTimeCounter();
 
@@ -342,24 +244,34 @@ class Quiz {
     const scoreText = this.resultBox.querySelector(".score_text");
     let scoreTag = "";
 
-    if (this.userScore > 3) {
-      scoreTag = `<span>and congrats! 🎉 You got <p>${this.userScore}</p> out of <p>${this.questions.length}</p></span>`;
-    } else if (this.userScore > 1) {
-      scoreTag = `<span>and nice 😎 You got <p>${this.userScore}</p> out of <p>${this.questions.length}</p></span>`;
+    if (this.percentage > 90) {
+      scoreTag = `
+        <span>congrats! greater than 90%🎉 You got <p>${this.percentage}</p> out of <p>100</p>
+        </span>
+    `;
+    } else if (this.percentage > 50) {
+      scoreTag = `
+        <span>and nice 😎 You got <p>${this.percentage}</p> out of <p>100</p>
+        </span>`;
     } else {
-      scoreTag = `<span>and sorry 😐 You got only <p>${this.userScore}</p> out of <p>${this.questions.length}</p></span>`;
+      scoreTag = `
+        <span>sorry 😐 You got only <p>${this.percentage}</p> out of <p>100</p>
+        </span>`;
     }
 
     scoreText.innerHTML = scoreTag;
 
     // Add percentage to result box
-    const percentageTag = `<div class="percentage">Score: ${this.percentage}%</div>`;
+    const percentageTag = `
+        <div class="percentage">Score: ${this.percentage}%
+        </div>`;
     this.resultBox.insertAdjacentHTML("beforeend", percentageTag);
   }
 
   startTimer(time) {
     this.counter = setInterval(() => {
       this.timeCount.textContent = time;
+      12;
       time--;
       if (time < 9)
         this.timeCount.textContent = "0" + this.timeCount.textContent;
@@ -389,6 +301,3 @@ class Quiz {
     }, 57);
   }
 }
-
-// Initialize Quiz
-const quiz = new Quiz(chapter_1_chapter_1_questions);
