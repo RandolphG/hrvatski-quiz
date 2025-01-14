@@ -232,40 +232,40 @@ export default class Quiz {
     this.infoBox.classList.remove("activeInfo");
     this.quizBox.classList.remove("activeQuiz");
     this.resultBox.classList.add("activeResult");
-    15;
-    // Stop total time counter when quiz ends
+
+    // Stop total time counter when the quiz ends
     this.stopTotalTimeCounter();
 
     // Calculate percentage
     this.percentage = ((this.userScore / this.questions.length) * 100).toFixed(
-      2,
+      1,
     );
 
+    // Format the total time
+    const formattedTotalTime = this.formatTime(this.totalTime);
+
+    // Update the result display
     const scoreText = this.resultBox.querySelector(".score_text");
     let scoreTag = "";
 
     if (this.percentage > 90) {
       scoreTag = `
-        <span>congrats! greater than 90%🎉 You got <p>${this.percentage}</p> out of <p>100</p>
-        </span>
+      <span>Great! 🎉 <p>${this.percentage}</p>% of <p>100</p></span>
+      <span>Time: <p>${formattedTotalTime}</p></span>
     `;
     } else if (this.percentage > 50) {
       scoreTag = `
-        <span>and nice 😎 You got <p>${this.percentage}</p> out of <p>100</p>
-        </span>`;
+      <span>Nice 😎 <p>${this.percentage}</p>% of <p>100</p></span>
+      <span>Time: <p>${formattedTotalTime}</p></span>
+    `;
     } else {
       scoreTag = `
-        <span>sorry 😐 You got only <p>${this.percentage}</p> out of <p>100</p>
-        </span>`;
+      <span>Sorry 😐 Only <p>${this.percentage}</p>% of <p>100</p></span>
+      <span>Time: <p>${formattedTotalTime}</p></span>
+    `;
     }
 
     scoreText.innerHTML = scoreTag;
-
-    // Add percentage to result box
-    const percentageTag = `
-        <div class="percentage">Score: ${this.percentage}%
-        </div>`;
-    this.resultBox.insertAdjacentHTML("beforeend", percentageTag);
   }
 
   startTimer(time) {
