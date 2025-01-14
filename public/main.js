@@ -27,7 +27,7 @@ class Main {
     const quizData = this.getQuizData();
 
     // Initialize Quiz instance with questions and quizData
-    this.quiz = new Quiz(yes_no_questions, quizData);
+    this.quiz = new Quiz(verb_biti, quizData);
 
     // Expose the Quiz instance globally
     window.quiz = this.quiz;

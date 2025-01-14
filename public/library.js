@@ -468,6 +468,7 @@ export const chapter_1_questions = [
   },
 ];
 
+/* Mup Questions */
 export const mup_questions = [
   {
     numb: 1,
