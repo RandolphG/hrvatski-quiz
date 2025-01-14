@@ -7,58 +7,95 @@
     <link rel="stylesheet" href="style.css"/>
     <link rel="icon" href="./favicon.ico"/>
     <link rel="apple-touch-icon-precomposed" href="./favicon.ico"/>
-    <!-- FontAwesome CDN Link for Icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
 <!-- start Quiz button -------------------------------------------------------------------------------------------->
 <div class="start_btn">
-    <button>Start Quiz</button>
+    <button class="start">Start Quiz</button>
+    <button class="stats">Stats</button>
 </div>
+
+<!-- PROFILE PAGE -------------------------------------------------------------------------------------------->
+<div class="profile_box">
+    <div class="profile-title">
+        <span>User Profile</span>
+    </div>
+    <div class="profile-stats">
+        <div class="stat">Time Played: <span>15 hours</span></div>
+        <div class="stat">Questions Answered: <span>250</span></div>
+        <div class="stat">Errors: <span>40</span></div>
+        <div class="stat">Types of Quizzes Taken: <span>5</span></div>
+    </div>
+    <div class="quiz-scores">
+        <div class="scores-title">Scores from Quiz Type:</div>
+        <div class="score-list">
+            <div class="score-item">Nouns and Gender:
+                <div class="results"><span class="error">17</span><span class="score">85%</span></div>
+            </div>
+            <div class="score-item">Personal Pronouns:
+                <div class="results"><span class="error">13</span><span class="score">85%</span></div>
+            </div>
+            <div class="score-item">Present Tense of Verbs:
+                <div class="results"><span class="error">6</span><span class="score">85%</span></div>
+            </div>
+            <div class="score-item">Word Order:
+                <div class="results"><span class="error">11</span><span class="score">85%</span></div>
+            </div>
+            <div class="score-item">“Yes-no” questions:
+                <div class="results"><span class="error">13</span><span class="score">85%</span></div>
+            </div>
+            <div class="score-item">Presentative Statements:
+                <div class="results"><span class="error">8</span><span class="score">85%</span></div>
+            </div>
+            <div class="score-item">Conjunctions:
+                <div class="results"><span class="error">3</span><span class="score">85%</span></div>
+            </div>
+            <div class="score-item">Possessive Pronominal Adjectives:
+                <div class="results"><span class="error">7</span><span class="score">85%</span></div>
+            </div>
+            <div class="score-item">Demonstrative Adjectives:
+                <div class="results"><span class="error">9</span><span class="score">85%</span></div>
+            </div>
+        </div>
+    </div>
+        <div class="profile-buttons">
+        <button class="quit">Exit</button>
+    </div>
+</div>
+
 <!-- Info Box ----------------------------------------------------------------------------------------------------->
 <div class="info_box">
     <div class="info-title">
-        <span>Chapter 1 Questions</span>
+        <span>Topics</span>
     </div>
     <div class="info-list">
         <div class="info">
-            <strong>Nouns and gender</strong> - Recognizing a noun’s gender.
+            <strong>Nouns and gender</strong>
         </div>
         <div class="info">
-            Nouns and gender - Gender in nouns of profession or nationality.
+            <strong>Personal pronouns</strong>
         </div>
         <div class="info">
-            Personal pronouns - Personal pronouns overview.
+            <strong>Present tense of verb - "biti"</strong>
         </div>
         <div class="info">
-            Present tense of verbs - Verb conjugation, introduction.
+            <strong>Questions / Question Words</strong>
         </div>
         <div class="info">
-            Present tense of verbs - The verb "biti."
+            <strong>Presentative statements</strong>
         </div>
         <div class="info">
-            Questions with question words.
+            <strong>Conjunctions</strong>
         </div>
         <div class="info">
-            “Yes-no” questions.
+            <strong>Possessive Pronominal Adjectives.</strong>
         </div>
         <div class="info">
-            Presentative statements - (ovo je, etc.).
+            <strong>Demonstrative Pronominal Adjectives</strong>
         </div>
         <div class="info">
-            Conjunctions.
-        </div>
-        <div class="info">
-            Possessive pronominal adjectives.
-        </div>
-        <div class="info">
-            Demonstrative pronominal adjectives (ovaj, taj, onaj).
-        </div>
-        <div class="info">
-            Word order - The role of clitics.
-        </div>
-        <div class="info">
-            Word order - The “XYZ” model of clitic placement.
+            <strong>Word order</strong>
         </div>
     </div>
 
@@ -70,7 +107,7 @@
 <!-- Quiz Box ----------------------------------------------------------------------------------------------------->
 <div class="quiz_box">
     <header>
-        <div class="title">Chapter # - Title</div>
+        <div class="title">Subject</div>
         <div class="timer">
             <div class="time_left_txt">Remain</div>
             <div class="timer_sec">30</div>
