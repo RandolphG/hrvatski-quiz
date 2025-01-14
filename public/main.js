@@ -3,6 +3,10 @@ import {
   yes_no_questions,
   gender_questions,
   verb_biti,
+  conjunctions,
+  possessive_pronominal_adjectives,
+  demonstrative_pronominal_adjectives,
+  word_order,
 } from "./library.js";
 import Quiz from "./classes/Quiz.js";
 
@@ -27,7 +31,7 @@ class Main {
     const quizData = this.getQuizData();
 
     // Initialize Quiz instance with questions and quizData
-    this.quiz = new Quiz(verb_biti, quizData);
+    this.quiz = new Quiz(word_order, quizData);
 
     // Expose the Quiz instance globally
     window.quiz = this.quiz;
@@ -51,9 +55,61 @@ class Main {
     } else {
       // Default structure for quiz statistics
       return {
-        timeSpent: 0,
+        totalTimesPlayed: 0,
         testCounts: {},
-        scores: [],
+        stats: {
+          totalTime: 0,
+          totalQuestions: 0,
+          totalErrors: 0,
+          questionTypes: 0,
+        },
+        score: {
+          noun_gender: {
+            played: 0,
+            error: 0,
+            score: 90,
+          },
+          personal_pronoun: {
+            played: 0,
+            error: 0,
+            score: 90,
+          },
+          Present_Tense_of_Verbs: {
+            played: 0,
+            error: 0,
+            score: 90,
+          },
+          Word_Order: {
+            played: 0,
+            error: 0,
+            score: 90,
+          },
+          questions: {
+            played: 0,
+            error: 0,
+            score: 90,
+          },
+          Presentative_Statements: {
+            played: 0,
+            error: 0,
+            score: 90,
+          },
+          Conjunctions: {
+            played: 0,
+            error: 0,
+            score: 90,
+          },
+          Possessive_Pronominal_Adjectives: {
+            played: 0,
+            error: 0,
+            score: 90,
+          },
+          Demonstrative_Adjectives: {
+            played: 0,
+            error: 0,
+            score: 90,
+          },
+        },
       };
     }
   }

@@ -7,17 +7,25 @@ export default class Quiz {
     this.queCount = 0;
     this.queNumb = 1;
     this.userScore = 0;
-    this.errorTotal = 0; // New property to track errors
-    this.percentage = 0; // New property to track percentage
-    this.totalTime = 0; // New property to track total time
+    this.errorTotal = 0; // track errors
+    this.percentage = 0; // track percentage
+    this.totalTime = 0; // track total time
     this.widthValue = 0;
     this.counter = null;
     this.counterLine = null;
 
-    this.startBtn = document.querySelector(".start_btn button");
+    this.startBtn = document.querySelector(".start_btn .start");
+    this.profileBtn = document.querySelector(".start_btn .stats");
+
+    this.profileBox = document.querySelector(".profile_box");
+    this.profileQuitBtn = this.profileBox.querySelector(
+      ".profile-buttons .quit",
+    );
+
     this.infoBox = document.querySelector(".info_box");
     this.exitBtn = this.infoBox.querySelector(".buttons .quit");
     this.continueBtn = this.infoBox.querySelector(".buttons .restart");
+
     this.quizBox = document.querySelector(".quiz_box");
     this.resultBox = document.querySelector(".result_box");
     this.optionList = document.querySelector(".option_list");
@@ -27,30 +35,91 @@ export default class Quiz {
     this.nextBtn = document.querySelector("footer .next_btn");
     this.bottomQueCounter = document.querySelector("footer .total_que");
     this.totalTimeDiv = this.createTotalTimeElement(); // Create total time element
-
-    // Example: Increment a specific test count
-    this.incrementTestCount("yesNoTest");
-
+    // Increment a specific test count
+    this.incrementTestCount("sample_test");
     this.init();
   }
 
   init() {
     this.startBtn.onclick = () => this.showInfoBox();
+    this.profileBtn.onclick = () => this.showStats();
+    this.profileQuitBtn.onclick = () => this.hideProfile();
     this.exitBtn.onclick = () => this.hideInfoBox();
     this.continueBtn.onclick = () => this.startQuiz();
     this.nextBtn.onclick = () => this.nextQuestion();
-
     this.resultBox.querySelector(".buttons .restart").onclick = () =>
       this.restartQuiz();
     this.resultBox.querySelector(".buttons .quit").onclick = () =>
       window.location.reload();
   }
 
+  showStats() {
+    console.log("Show stats!");
+    this.profileBox.classList.add("activeProfile");
+
+    // Load quiz data from local storage
+    const quizData = JSON.parse(localStorage.getItem("quizData")) || {
+      testCounts: {},
+      stats: {
+        totalTime: 0,
+        totalQuestions: 0,
+        totalErrors: 0,
+      },
+    };
+
+    // Update profile stats
+    const totalTimeElement = this.profileBox.querySelector(
+      ".stat:nth-child(1) span",
+    );
+    const questionsAnsweredElement = this.profileBox.querySelector(
+      ".stat:nth-child(2) span",
+    );
+    const totalErrorsElement = this.profileBox.querySelector(
+      ".stat:nth-child(3) span",
+    );
+    const quizTypesElement = this.profileBox.querySelector(
+      ".stat:nth-child(4) span",
+    );
+
+    totalTimeElement.textContent = this.formatTime(quizData.stats.totalTime);
+    questionsAnsweredElement.textContent = quizData.stats.totalQuestions;
+    totalErrorsElement.textContent = quizData.stats.totalErrors;
+    quizTypesElement.textContent = Object.keys(quizData.testCounts).length;
+
+    // Populate scores
+    const scoreListElement = this.profileBox.querySelector(".score-list");
+    scoreListElement.innerHTML = ""; // Clear previous entries
+
+    Object.entries(quizData.testCounts).forEach(([quizType, stats]) => {
+      const scoreItem = document.createElement("div");
+      scoreItem.classList.add("score-item");
+
+      scoreItem.innerHTML = `
+        ${quizType}:
+        <div class="results">
+          <span class="error">${stats.errors || 0}</span>
+          <span class="score">${stats.score || 0}%</span>
+        </div>
+      `;
+
+      scoreListElement.appendChild(scoreItem);
+    });
+  }
+
+  hideProfile() {
+    console.log(`hide stats!!`);
+    this.profileBox.classList.remove("activeProfile");
+  }
+
   incrementTestCount(testName) {
     if (!this.data.testCounts[testName]) {
       this.data.testCounts[testName] = 0;
     }
+    if (!this.data.totalTimesPlayed) {
+      this.data.totalTimesPlayed = 0;
+    }
     this.data.testCounts[testName]++;
+    this.data.totalTimesPlayed++;
 
     // Save updated data to local storage
     this.saveQuizData();
@@ -58,6 +127,34 @@ export default class Quiz {
 
   saveQuizData() {
     localStorage.setItem("quizData", JSON.stringify(this.data));
+  }
+
+  saveQuizStats() {
+    // Retrieve or initialize data
+    const quizData = JSON.parse(localStorage.getItem("quizData")) || {
+      testCounts: {},
+      stats: {
+        totalTime: 0,
+        totalQuestions: 0,
+        totalErrors: 0,
+      },
+    };
+
+    // Update stats
+    quizData.stats.totalTime += this.totalTime;
+    quizData.stats.totalQuestions += this.questions.length;
+    quizData.stats.totalErrors += this.errorTotal;
+
+    // Update specific test stats
+    const currentTest = this.currentQuizType || "General Quiz";
+    if (!quizData.testCounts[currentTest]) {
+      quizData.testCounts[currentTest] = { errors: 0, score: 0 };
+    }
+    quizData.testCounts[currentTest].errors += this.errorTotal;
+    quizData.testCounts[currentTest].score = this.percentage;
+
+    // Save to local storage
+    localStorage.setItem("quizData", JSON.stringify(quizData));
   }
 
   createTotalTimeElement() {
@@ -98,6 +195,7 @@ export default class Quiz {
   }
 
   hideInfoBox() {
+    console.log("hideInfoBox");
     this.infoBox.classList.remove("activeInfo");
   }
 
@@ -233,6 +331,9 @@ export default class Quiz {
     this.quizBox.classList.remove("activeQuiz");
     this.resultBox.classList.add("activeResult");
 
+    // super.showResult(); // Call the original method
+    // this.saveQuizStats(); // Save stats after completing the quiz
+
     // Stop total time counter when the quiz ends
     this.stopTotalTimeCounter();
 
@@ -241,12 +342,23 @@ export default class Quiz {
       1,
     );
 
+    this.errorTotal = this.questions.length - this.userScore;
+
     // Format the total time
     const formattedTotalTime = this.formatTime(this.totalTime);
 
     // Update the result display
     const scoreText = this.resultBox.querySelector(".score_text");
     let scoreTag = "";
+
+    this.data.stats.totalTime += formattedTotalTime;
+    this.data.stats.totalErrors += this.errorTotal;
+    this.data.stats.totalQuestions += this.questions.length;
+    this.data.score.noun_gender.error = this.errorTotal;
+    this.data.score.noun_gender.score = this.percentage;
+
+    // Save updated data to local storage
+    this.saveQuizData();
 
     if (this.percentage > 90) {
       scoreTag = `
