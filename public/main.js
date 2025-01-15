@@ -29,12 +29,19 @@ class Main {
   constructor() {
     // Retrieve quiz data from local storage
     const quizData = this.getQuizData();
+    console.log(quizData);
 
     // Initialize Quiz instance with questions and quizData
-    this.quiz = new Quiz(word_order, quizData);
+    // this.quiz = new Quiz(chapter_1_questions, quizData);
 
+    const quiz = new Quiz(chapter_1_questions, quizData);
     // Expose the Quiz instance globally
     window.quiz = this.quiz;
+
+    // Set the category to "gender"
+    quiz.setCategory("verb_biti");
+    quiz.incrementTestCount("verb_biti");
+    // quiz.startQuiz();
 
     // Start the quiz
     this.startQuiz();
