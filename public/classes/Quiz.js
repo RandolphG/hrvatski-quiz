@@ -1,15 +1,24 @@
 export default class Quiz {
   constructor(questions, quizData) {
-    this.questions = questions;
-    this.data = quizData; // Store the quizData object
+    // Parse questions from the nested data format
+    // this.questions = this.parseQuestions(questions);
+
+    this.originalQuestionsData = questions; // Save original nested data
+    this.questions = [];
+    this.category = null; // Active category for filtering questions
+
+    this.filteredQuestions = []; // To store category-specific questions
+
+    // Store the quizData object
+    this.data = quizData;
     this.questions = questions;
     this.timeValue = 30;
     this.queCount = 0;
     this.queNumb = 1;
     this.userScore = 0;
-    this.errorTotal = 0; // track errors
-    this.percentage = 0; // track percentage
-    this.totalTime = 0; // track total time
+    this.errorTotal = 0;
+    this.percentage = 0;
+    this.totalTime = 0;
     this.widthValue = 0;
     this.counter = null;
     this.counterLine = null;
@@ -34,9 +43,9 @@ export default class Quiz {
     this.timeCount = document.querySelector(".timer .timer_sec");
     this.nextBtn = document.querySelector("footer .next_btn");
     this.bottomQueCounter = document.querySelector("footer .total_que");
-    this.totalTimeDiv = this.createTotalTimeElement(); // Create total time element
+    this.totalTimeDiv = this.createTotalTimeElement();
     // Increment a specific test count
-    this.incrementTestCount("sample_test");
+
     this.init();
   }
 
@@ -51,6 +60,17 @@ export default class Quiz {
       this.restartQuiz();
     this.resultBox.querySelector(".buttons .quit").onclick = () =>
       window.location.reload();
+  }
+
+  // Parse the nested question data format into a flat array of questions
+  parseQuestions(questionsData) {
+    const parsedQuestions = [];
+    questionsData.forEach((category) => {
+      Object.values(category).forEach((questionsArray) => {
+        parsedQuestions.push(...questionsArray);
+      });
+    });
+    return parsedQuestions;
   }
 
   showStats() {
@@ -90,17 +110,35 @@ export default class Quiz {
     const scoreListElement = this.profileBox.querySelector(".score-list");
     scoreListElement.innerHTML = ""; // Clear previous entries
 
-    Object.entries(quizData.testCounts).forEach(([quizType, stats]) => {
+    /*Object.entries(quizData.testCounts).forEach(([quizType, stats]) => {
       const scoreItem = document.createElement("div");
       scoreItem.classList.add("score-item");
 
       scoreItem.innerHTML = `
         ${quizType}:
         <div class="results">
-          <span class="error">${stats.errors || 0}</span>
+          <span class="error">${stats.played || 0}</span>
+          <span class="score">${stats.errors || 0}</span>
           <span class="score">${stats.score || 0}%</span>
         </div>
       `;
+
+      scoreListElement.appendChild(scoreItem);
+    });*/
+
+    // Iterate over the `score` object to populate score items
+    Object.entries(quizData.score).forEach(([quizType, stats]) => {
+      const scoreItem = document.createElement("div");
+      scoreItem.classList.add("score-item");
+
+      scoreItem.innerHTML = `
+      <div class="quiz-type">${quizType}:</div>
+      <div class="results">
+        <span class="score">Times: ${stats.played || 0}</span>
+        <span class="score">Err: ${stats.error || 0}</span>
+        <span class="score">Score: ${stats.score || 0}%</span>
+      </div>
+    `;
 
       scoreListElement.appendChild(scoreItem);
     });
@@ -141,7 +179,7 @@ export default class Quiz {
     };
 
     // Update stats
-    quizData.stats.totalTime += this.totalTime;
+    quizData.stats.totalTime += this.totalTime; // Correctly add numerical value
     quizData.stats.totalQuestions += this.questions.length;
     quizData.stats.totalErrors += this.errorTotal;
 
@@ -199,7 +237,24 @@ export default class Quiz {
     this.infoBox.classList.remove("activeInfo");
   }
 
+  setCategory(category) {
+    this.category = category;
+    const filteredData = this.originalQuestionsData.find(
+      (cat) => cat[category],
+    );
+    if (filteredData) {
+      this.questions = filteredData[category];
+    } else {
+      console.warn(`Category "${category}" not found.`);
+      this.questions = [];
+    }
+  }
+
   startQuiz() {
+    if (!this.questions.length) {
+      console.error("No questions available for the selected category.");
+      return;
+    }
     this.hideInfoBox();
     this.quizBox.classList.add("activeQuiz");
     this.showQuestion(this.queCount);
@@ -226,7 +281,8 @@ export default class Quiz {
 
     const options = this.optionList.querySelectorAll(".option");
     options.forEach((option) =>
-      option.setAttribute("onclick", "quiz.optionSelected(this)"),
+      // option.setAttribute("onclick", "quiz.optionSelected(this)"),
+      option.addEventListener("click", () => this.optionSelected(option)),
     );
   }
 
@@ -331,17 +387,15 @@ export default class Quiz {
     this.quizBox.classList.remove("activeQuiz");
     this.resultBox.classList.add("activeResult");
 
-    // super.showResult(); // Call the original method
-    // this.saveQuizStats(); // Save stats after completing the quiz
-
-    // Stop total time counter when the quiz ends
+    // Stop total time counter
     this.stopTotalTimeCounter();
 
-    // Calculate percentage
+    // Calc percentage correct
     this.percentage = ((this.userScore / this.questions.length) * 100).toFixed(
       1,
     );
 
+    // Calc the total error
     this.errorTotal = this.questions.length - this.userScore;
 
     // Format the total time
@@ -351,14 +405,19 @@ export default class Quiz {
     const scoreText = this.resultBox.querySelector(".score_text");
     let scoreTag = "";
 
-    this.data.stats.totalTime += formattedTotalTime;
+    // Ensure the category exists in the score object
+    if (!this.data.score[this.category]) {
+      this.data.score[this.category] = { played: 0, error: 0, score: 0 };
+    }
+
+    this.data.stats.totalTime += this.totalTime;
     this.data.stats.totalErrors += this.errorTotal;
     this.data.stats.totalQuestions += this.questions.length;
-    this.data.score.noun_gender.error = this.errorTotal;
-    this.data.score.noun_gender.score = this.percentage;
 
-    // Save updated data to local storage
-    this.saveQuizData();
+    // Update category-specific stats
+    this.data.score[this.category].played++;
+    this.data.score[this.category].error = this.errorTotal;
+    this.data.score[this.category].score = this.percentage;
 
     if (this.percentage > 90) {
       scoreTag = `
@@ -378,6 +437,9 @@ export default class Quiz {
     }
 
     scoreText.innerHTML = scoreTag;
+
+    // Save updated data to local storage
+    this.saveQuizData();
   }
 
   startTimer(time) {
