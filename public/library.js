@@ -465,6 +465,648 @@ export const chapter_1_questions = [
         options: ["Je", "jesu", "jeste", "jesmo", "jesi"],
       },
     ],
+    conjunctions: [
+      {
+        numb: 1,
+        question: "_____ li vi student?",
+        answer: "Jèste",
+        options: ["Jèste", "je", "jesmo", "jesu", "jest"],
+      },
+      {
+        numb: 2,
+        question: "Kako _____ Marko i Ana došli ovde?",
+        answer: "i",
+        options: ["i", "a", "ali", "ili", "ii"],
+      },
+      {
+        numb: 3,
+        question: "Bio je umoran, _____ nastavio je raditi.",
+        answer: "ali",
+        options: ["ali", "i", "a", "ili", "ii"],
+      },
+      {
+        numb: 4,
+        question: "Danas ćemo jesti _____ ribu _____ meso.",
+        answer: "ili ... ili",
+        options: ["i ... i", "ili ... ili", "a ... a", "ali ... ali", "ii"],
+      },
+      {
+        numb: 5,
+        question: "On voli čaj, _____ ponekad pije kafu.",
+        answer: "a",
+        options: ["a", "ali", "i", "ili", "ii"],
+      },
+      {
+        numb: 6,
+        question: "Došli su _____ Marko _____ Ana.",
+        answer: "i ... i",
+        options: ["i ... i", "a ... a", "ili ... ili", "ali ... ali", "ii"],
+      },
+      {
+        numb: 7,
+        question: "Rekao je da će stići, _____ nije došao.",
+        answer: "ali",
+        options: ["ali", "a", "i", "ili", "ii"],
+      },
+      {
+        numb: 8,
+        question: "Ne znam da li je _____ došao _____ nije.",
+        answer: "ili ... ili",
+        options: ["ili ... ili", "a ... a", "i ... i", "ali ... ali", "ii"],
+      },
+      {
+        numb: 9,
+        question: "_____ ti tako misliš?",
+        answer: "A",
+        options: ["A", "i", "ali", "ili", "ii"],
+      },
+      {
+        numb: 10,
+        question: "Knjiga je bila teška, _____ sam je završio.",
+        answer: "ali",
+        options: ["ali", "a", "i", "ili", "ii"],
+      },
+      {
+        numb: 11,
+        question: "Voli i kafu _____ čaj.",
+        answer: "i",
+        options: ["i", "a", "ali", "ili", "ii"],
+      },
+      {
+        numb: 12,
+        question: "_____ vi razumete ovo?",
+        answer: "A",
+        options: ["A", "ali", "i", "ili", "ii"],
+      },
+      {
+        numb: 13,
+        question: "_____ Marko _____ Ana su stigli kasno.",
+        answer: "I ... i",
+        options: ["I ... i", "Ali ... ali", "A ... a", "Ili ... ili", "ii"],
+      },
+      {
+        numb: 14,
+        question: "Nisam siguran da li _____ znaš odgovor.",
+        answer: "i",
+        options: ["i", "ali", "a", "ili", "ii"],
+      },
+      {
+        numb: 15,
+        question: "Rekao je nešto, _____ nisam ga razumeo.",
+        answer: "ali",
+        options: ["ali", "a", "i", "ili", "ii"],
+      },
+      {
+        numb: 16,
+        question: "_____, to je vrlo važno!",
+        answer: "I",
+        options: ["I", "A", "Ali", "Ili", "ii"],
+      },
+      {
+        numb: 17,
+        question: "Da li voliš _____ voće _____ povrće?",
+        answer: "ili ... ili",
+        options: ["ili ... ili", "a ... a", "i ... i", "ali ... ali", "ii"],
+      },
+      {
+        numb: 18,
+        question: "Pričao je o tome, _____ nisam shvatila sve.",
+        answer: "ali",
+        options: ["ali", "i", "a", "ili", "ii"],
+      },
+      {
+        numb: 19,
+        question: "_____, možemo ići zajedno.",
+        answer: "I",
+        options: ["I", "A", "Ali", "Ili", "ii"],
+      },
+      {
+        numb: 20,
+        question: "_____, je li ovo tačno?",
+        answer: "A",
+        options: ["A", "i", "ali", "ili", "ii"],
+      },
+    ],
+    possessive_pronominal_adjectives: [
+      {
+        numb: 1,
+        question: "Ovo je _____ knjiga.",
+        answer: "moja",
+        options: ["moja", "tvoja", "njena", "naša", "vaša"],
+      },
+      {
+        numb: 2,
+        question: "Da li je ovo _____ kuća?",
+        answer: "tvoja",
+        options: ["moja", "tvoja", "njena", "naša", "vaša"],
+      },
+      {
+        numb: 3,
+        question: "Oni su prodali _____ auto.",
+        answer: "svoj",
+        options: ["svoj", "moj", "tvoj", "njen", "naš"],
+      },
+      {
+        numb: 4,
+        question: "Da li ste vi zaboravili _____ pasoš?",
+        answer: "vaš",
+        options: ["vaš", "tvoj", "moj", "njen", "njihov"],
+      },
+      {
+        numb: 5,
+        question: "Ona traži _____ telefon.",
+        answer: "svoj",
+        options: ["svoj", "tvoj", "njihov", "naš", "njen"],
+      },
+      {
+        numb: 6,
+        question: "_____ mišljenje je drugačije od mog.",
+        answer: "Tvoje",
+        options: ["Tvoje", "Vaše", "Njeno", "Naše", "Njihovo"],
+      },
+      {
+        numb: 7,
+        question: "Ovo su _____ stvari.",
+        answer: "naše",
+        options: ["naše", "moje", "njihove", "vaše", "tvoje"],
+      },
+      {
+        numb: 8,
+        question: "_____ kuća je blizu reke.",
+        answer: "Njena",
+        options: ["Njena", "Naša", "Moja", "Vaša", "Tvoja"],
+      },
+      {
+        numb: 9,
+        question: "Da li je ovo _____ jakna?",
+        answer: "njegova",
+        options: ["njegova", "njen", "njihova", "tvoja", "naša"],
+      },
+      {
+        numb: 10,
+        question: "Oni su zaboravili _____ stvari kod kuće.",
+        answer: "svoje",
+        options: ["svoje", "naše", "njene", "vaše", "tvoje"],
+      },
+      {
+        numb: 11,
+        question: "Ovo je _____ torba.",
+        answer: "moj",
+        options: ["moj", "njen", "njihov", "tvoj", "vaš"],
+      },
+      {
+        numb: 12,
+        question: "Da li ste vi doneli _____ knjige?",
+        answer: "vaše",
+        options: ["vaše", "tvoje", "moje", "njihove", "njene"],
+      },
+      {
+        numb: 13,
+        question: "Ovo je _____ stan.",
+        answer: "njihov",
+        options: ["njihov", "naš", "vaš", "tvoj", "njen"],
+      },
+      {
+        numb: 14,
+        question: "Ovo je _____ sestra.",
+        answer: "njezina",
+        options: ["njezina", "njena", "moj", "naša", "vaša"],
+      },
+      {
+        numb: 15,
+        question: "On je zaboravio _____ torbu.",
+        answer: "svoju",
+        options: ["svoju", "tvoju", "moju", "njegovu", "našu"],
+      },
+      {
+        numb: 16,
+        question: "Da li ste vi izgubili _____ ključeve?",
+        answer: "vaše",
+        options: ["vaše", "tvoje", "njihove", "njene", "moje"],
+      },
+      {
+        numb: 17,
+        question: "_____ automobil je parkiran ispred kuće.",
+        answer: "Moj",
+        options: ["Moj", "Tvoj", "Njihov", "Naš", "Vaš"],
+      },
+      {
+        numb: 18,
+        question: "Da li je to _____ ideja?",
+        answer: "tvoja",
+        options: ["tvoja", "njena", "njihova", "naša", "moja"],
+      },
+      {
+        numb: 19,
+        question: "Oni su zaboravili _____ rančeve kod kuće.",
+        answer: "svoje",
+        options: ["svoje", "njihove", "naše", "njegove", "tvoje"],
+      },
+      {
+        numb: 20,
+        question: "_____ porodica živi u Zagrebu.",
+        answer: "Njena",
+        options: ["Njena", "Naša", "Njihova", "Tvoja", "Vaša"],
+      },
+      {
+        numb: 21,
+        question: "Da li ste vi odneli _____ dokumente?",
+        answer: "vaše",
+        options: ["vaše", "njihove", "moje", "tvoje", "svoje"],
+      },
+      {
+        numb: 22,
+        question: "Ovo je _____ škola.",
+        answer: "naša",
+        options: ["naša", "njihova", "tvoja", "moja", "vaša"],
+      },
+      {
+        numb: 23,
+        question: "Oni su prodali _____ kuću.",
+        answer: "svoju",
+        options: ["svoju", "njihovu", "našu", "moju", "tvoju"],
+      },
+      {
+        numb: 24,
+        question: "_____ roditelji su veoma ljubazni.",
+        answer: "Njeni",
+        options: ["Njeni", "Naši", "Vaši", "Njihovi", "Tvoji"],
+      },
+      {
+        numb: 25,
+        question: "On je doneo _____ laptop.",
+        answer: "svoj",
+        options: ["svoj", "njegov", "moj", "tvoj", "njihov"],
+      },
+      {
+        numb: 26,
+        question: "Da li ste vi ostavili _____ kaput?",
+        answer: "vaš",
+        options: ["vaš", "njihov", "moj", "tvoj", "njen"],
+      },
+      {
+        numb: 27,
+        question: "Ovo su _____ deca.",
+        answer: "naša",
+        options: ["naša", "njihova", "vaša", "moja", "tvoja"],
+      },
+      {
+        numb: 28,
+        question: "_____ posao je veoma važan.",
+        answer: "Njegov",
+        options: ["Njegov", "Naš", "Vaš", "Tvoj", "Njihov"],
+      },
+      {
+        numb: 29,
+        question: "Oni su odneli _____ stvari na put.",
+        answer: "svoje",
+        options: ["svoje", "njihove", "naše", "vaše", "tvoje"],
+      },
+      {
+        numb: 30,
+        question: "Da li je to _____ mačka?",
+        answer: "njihova",
+        options: ["njihova", "njen", "moja", "vaša", "naša"],
+      },
+    ],
+    demonstrative_pronominal_adjectives: [
+      {
+        numb: 1,
+        question:
+          "Which word would you use to describe something close to the speaker?",
+        answer: "ovaj",
+        options: ["ovaj", "taj", "onaj", "njihov", "moj"],
+      },
+      {
+        numb: 2,
+        question:
+          "Which demonstrative adjective indicates something neutral or closer to the listener?",
+        answer: "taj",
+        options: ["taj", "ovaj", "onaj", "njihov", "naš"],
+      },
+      {
+        numb: 3,
+        question:
+          "Which word means something far from both the speaker and listener?",
+        answer: "onaj",
+        options: ["onaj", "taj", "ovaj", "vaš", "njihova"],
+      },
+      {
+        numb: 4,
+        question: "Da li ti se sviđa _____ pas? (close to speaker)",
+        answer: "ovaj",
+        options: ["ovaj", "taj", "onaj", "njihov", "moj"],
+      },
+      {
+        numb: 5,
+        question:
+          "Koji od ovih automobila ti se više sviđa, _____ ili _____? (close to speaker vs. neutral)",
+        answer: "ovaj ... taj",
+        options: [
+          "ovaj ... taj",
+          "taj ... onaj",
+          "onaj ... ovaj",
+          "njihov ... vaš",
+          "moj ... njihov",
+        ],
+      },
+      {
+        numb: 6,
+        question: "_____ kuća je blizu reke. (neutral position)",
+        answer: "Taj",
+        options: ["Taj", "Ovaj", "Onaj", "Vaš", "Njegov"],
+      },
+      {
+        numb: 7,
+        question:
+          "Da li si video _____ planinu? (far from speaker and listener)",
+        answer: "onaj",
+        options: ["onaj", "taj", "ovaj", "njihov", "tvoj"],
+      },
+      {
+        numb: 8,
+        question: "Ovo je moj sto, a _____ je tvoj. (neutral position)",
+        answer: "taj",
+        options: ["taj", "onaj", "ovaj", "njihov", "moj"],
+      },
+      {
+        numb: 9,
+        question:
+          "Kako ti se čini _____ zgrada tamo? (far from speaker and listener)",
+        answer: "onaj",
+        options: ["onaj", "taj", "ovaj", "njihova", "naša"],
+      },
+      {
+        numb: 10,
+        question:
+          "Which demonstrative is used for an object someone is holding?",
+        answer: "ovaj",
+        options: ["ovaj", "taj", "onaj", "njihov", "vaš"],
+      },
+      {
+        numb: 11,
+        question:
+          "_____ pas koji stoji pored tebe je simpatičan. (neutral position)",
+        answer: "Taj",
+        options: ["Taj", "Ovaj", "Onaj", "Njihov", "Naš"],
+      },
+      {
+        numb: 12,
+        question:
+          "Da li ti se sviđa _____ film koji smo gledali? (far from speaker and listener)",
+        answer: "onaj",
+        options: ["onaj", "taj", "ovaj", "njihov", "vaš"],
+      },
+      {
+        numb: 13,
+        question: "Kako se zove _____ devojka ovde? (close to speaker)",
+        answer: "ovaj",
+        options: ["ovaj", "taj", "onaj", "njihova", "naša"],
+      },
+      {
+        numb: 14,
+        question:
+          "Which demonstrative adjective is closest in meaning to 'this' in English?",
+        answer: "ovaj",
+        options: ["ovaj", "taj", "onaj", "njihova", "moj"],
+      },
+      {
+        numb: 15,
+        question:
+          "Which demonstrative adjective is closest in meaning to 'that' in English?",
+        answer: "taj",
+        options: ["taj", "ovaj", "onaj", "njihov", "vaš"],
+      },
+      {
+        numb: 16,
+        question: "_____ knjiga na stolu je moja. (close to speaker)",
+        answer: "Ova",
+        options: ["Ova", "Ta", "Ona", "Njegova", "Vaša"],
+      },
+      {
+        numb: 17,
+        question: "_____ ptica na grani mi se mnogo dopada. (neutral position)",
+        answer: "Ta",
+        options: ["Ta", "Ova", "Ona", "Naša", "Njihova"],
+      },
+      {
+        numb: 18,
+        question:
+          "Kako ti se sviđa _____ selo koje smo posetili prošle godine? (far from speaker and listener)",
+        answer: "ono",
+        options: ["ono", "to", "ovo", "njihovo", "moje"],
+      },
+      {
+        numb: 19,
+        question: "_____ park ovde je veoma lep. (close to speaker)",
+        answer: "Ovaj",
+        options: ["Ovaj", "Taj", "Onaj", "Njihov", "Vaš"],
+      },
+      {
+        numb: 20,
+        question:
+          "Da li ti se dopada _____ torba pored tebe? (neutral position)",
+        answer: "ta",
+        options: ["ta", "ova", "ona", "njihova", "naša"],
+      },
+      {
+        numb: 21,
+        question:
+          "Ko je vlasnik _____ bicikla tamo? (far from speaker and listener)",
+        answer: "onog",
+        options: ["onog", "tog", "ovog", "njihovog", "mojeg"],
+      },
+      {
+        numb: 22,
+        question:
+          "_____ film koji sada gledamo je zanimljiv. (close to speaker)",
+        answer: "Ovaj",
+        options: ["Ovaj", "Taj", "Onaj", "Njegov", "Vaš"],
+      },
+      {
+        numb: 23,
+        question:
+          "Kako se zove _____ pesma koja se upravo završila? (neutral position)",
+        answer: "ta",
+        options: ["ta", "ova", "ona", "njihova", "naša"],
+      },
+      {
+        numb: 24,
+        question:
+          "Da li ti se sviđa _____ kuća na brdu? (far from speaker and listener)",
+        answer: "ona",
+        options: ["ona", "ta", "ova", "njihova", "moj"],
+      },
+      {
+        numb: 25,
+        question: "_____ auto ovde je novi. (close to speaker)",
+        answer: "Ovaj",
+        options: ["Ovaj", "Taj", "Onaj", "Njegov", "Vaš"],
+      },
+      {
+        numb: 26,
+        question: "Kako se zove _____ dečko pored tebe? (neutral position)",
+        answer: "taj",
+        options: ["taj", "ovaj", "onaj", "njihov", "vaš"],
+      },
+      {
+        numb: 27,
+        question:
+          "Da li ti se dopada _____ grad tamo u daljini? (far from speaker and listener)",
+        answer: "onaj",
+        options: ["onaj", "taj", "ovaj", "njihov", "vaš"],
+      },
+      {
+        numb: 28,
+        question:
+          "_____ stablo ovde je staro preko sto godina. (close to speaker)",
+        answer: "Ovo",
+        options: ["Ovo", "To", "Ono", "Njihovo", "Moje"],
+      },
+      {
+        numb: 29,
+        question:
+          "Da li ti se dopada _____ pesma koju slušamo? (neutral position)",
+        answer: "ta",
+        options: ["ta", "ova", "ona", "njihova", "naša"],
+      },
+      {
+        numb: 30,
+        question:
+          "Kako ti se čini _____ planina tamo u daljini? (far from speaker and listener)",
+        answer: "ona",
+        options: ["ona", "ta", "ova", "njihova", "vaša"],
+      },
+    ],
+    word_order: [
+      {
+        numb: 1,
+        question:
+          "In the sentence 'Ona je Amerikanka,' which word occupies the Y slot?",
+        answer: "je",
+        options: ["Ona", "je", "Amerikanka", "se", "li"],
+      },
+      {
+        numb: 2,
+        question: "In 'Kako se ona zove?', which word is the clitic?",
+        answer: "se",
+        options: ["Kako", "se", "ona", "zove", "je"],
+      },
+      {
+        numb: 3,
+        question: "Which slot does 'je' occupy in 'Amerikanka je'?",
+        answer: "Y",
+        options: ["X", "Y", "Z", "None", "Both X and Y"],
+      },
+      {
+        numb: 4,
+        question:
+          "What is the first significant unit (slot X) in 'Zovem se Sanja Lalić'?",
+        answer: "Zovem",
+        options: ["Zovem", "se", "Sanja", "Lalić", "je"],
+      },
+      {
+        numb: 5,
+        question: "Which clitic must always come before others in a sentence?",
+        answer: "li",
+        options: ["li", "je", "se", "da", "su"],
+      },
+      {
+        numb: 6,
+        question: "In 'Da li ste student?', which word occupies slot X?",
+        answer: "Da",
+        options: ["Da", "li", "ste", "student", "je"],
+      },
+      {
+        numb: 7,
+        question: "What is the clitic in 'Jeste li student?'?",
+        answer: "li",
+        options: ["li", "Jeste", "student", "je", "se"],
+      },
+      {
+        numb: 8,
+        question: "In 'Kako se ona zove?', which word occupies slot Z?",
+        answer: "zove",
+        options: ["Kako", "se", "ona", "zove", "je"],
+      },
+      {
+        numb: 9,
+        question: "True or false: Slot Z can occasionally be empty.",
+        answer: "True",
+        options: ["True", "False"],
+      },
+      {
+        numb: 10,
+        question: "In 'Amerikanka je,' what type of word is in slot Z?",
+        answer: "predicate noun",
+        options: ["subject", "clitic", "predicate noun", "verb", "adjective"],
+      },
+      {
+        numb: 11,
+        question: "Which word follows 'li' in 'Jeste li student?'?",
+        answer: "student",
+        options: ["student", "Jeste", "je", "se", "ona"],
+      },
+      {
+        numb: 12,
+        question:
+          "In 'Ja se zovem Sanja Lalić,' which clitic comes after the first significant unit?",
+        answer: "se",
+        options: ["se", "zovem", "ja", "Sanja", "je"],
+      },
+      {
+        numb: 13,
+        question: "Which word is in slot X in 'Kako se ona zove?'?",
+        answer: "Kako",
+        options: ["Kako", "se", "ona", "zove", "je"],
+      },
+      {
+        numb: 14,
+        question:
+          "True or false: Clitics must always follow the first significant unit in the sentence.",
+        answer: "True",
+        options: ["True", "False"],
+      },
+      {
+        numb: 15,
+        question:
+          "In 'Jeste li student?', what is the grammatical role of 'li'?",
+        answer: "question particle",
+        options: ["question particle", "verb", "noun", "adjective", "pronoun"],
+      },
+      {
+        numb: 16,
+        question: "Which clitic forms part of the question phrase 'Da li'?",
+        answer: "li",
+        options: ["li", "da", "je", "se", "su"],
+      },
+      {
+        numb: 17,
+        question: "In 'Ona je Amerikanka,' which word is the subject?",
+        answer: "Ona",
+        options: ["Ona", "je", "Amerikanka", "se", "li"],
+      },
+      {
+        numb: 18,
+        question:
+          "Which word in 'Zòvem se Sanja Làlić' is pronounced without its own accent?",
+        answer: "se",
+        options: ["Zòvem", "se", "Sanja", "Làlić", "je"],
+      },
+      {
+        numb: 19,
+        question: "In 'Da li ste student?', which word is the predicate noun?",
+        answer: "student",
+        options: ["student", "ste", "li", "Da", "se"],
+      },
+      {
+        numb: 20,
+        question:
+          "What does 'Da' represent in the phrase 'Da li ste student?'?",
+        answer: "conjunction",
+        options: ["conjunction", "verb", "noun", "pronoun", "clitic"],
+      },
+    ],
   },
 ];
 
@@ -2573,5 +3215,26 @@ export const word_order = [
     question: "What does 'Da' represent in the phrase 'Da li ste student?'?",
     answer: "conjunction",
     options: ["conjunction", "verb", "noun", "pronoun", "clitic"],
+  },
+];
+
+const example = [
+  {
+    gender: [
+      {
+        numb: 1,
+        question: "What is the gender of the Croatian word 'muškàrac' (man)?",
+        answer: "Masculine",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+    ],
+    gender2: [
+      {
+        numb: 1,
+        question: "What is the gender of the Croatian word 'muškàrac' (man)?",
+        answer: "Masculine",
+        options: ["Masculine", "Feminine", "Neuter"],
+      },
+    ],
   },
 ];
