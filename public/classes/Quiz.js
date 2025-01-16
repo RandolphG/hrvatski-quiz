@@ -6,6 +6,7 @@ export default class Quiz {
     this.originalQuestionsData = questions; // Save original nested data
     this.questions = [];
     this.category = null; // Active category for filtering questions
+    this.totalTimeInterval = null;
 
     this.filteredQuestions = []; // To store category-specific questions
 
@@ -135,7 +136,7 @@ export default class Quiz {
       <div class="quiz-type">${quizType}:</div>
       <div class="results">
         <span class="score">Times: ${stats.played || 0}</span>
-        <span class="score">Err: ${stats.error || 0}</span>
+        <span class="error">Err0r: ${stats.error || 0}</span>
         <span class="score">Score: ${stats.score || 0}%</span>
       </div>
     `;
