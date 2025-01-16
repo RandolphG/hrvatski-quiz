@@ -1,13 +1,4 @@
-import {
-  chapter_1_questions,
-  yes_no_questions,
-  gender_questions,
-  verb_biti,
-  conjunctions,
-  possessive_pronominal_adjectives,
-  demonstrative_pronominal_adjectives,
-  word_order,
-} from "./library.js";
+import { chapter_1_questions, example } from "./library.js";
 import Quiz from "./classes/Quiz.js";
 
 /**
@@ -32,18 +23,19 @@ class Main {
     console.log(quizData);
 
     // Initialize Quiz instance with questions and quizData
-    // this.quiz = new Quiz(chapter_1_questions, quizData);
-
     const quiz = new Quiz(chapter_1_questions, quizData);
-    // Expose the Quiz instance globally
-    window.quiz = this.quiz;
+    this.quiz = quiz;
 
-    // Set the category to "gender"
-    quiz.setCategory("verb_biti");
-    quiz.incrementTestCount("verb_biti");
-    // quiz.startQuiz();
+    // Expose the Quiz instance globally for debugging or external manipulation
+    window.quiz = quiz;
 
-    // Start the quiz
+    // Populate the dropdown with categories
+    this.populateDropdown();
+
+    // Set up the dropdown listener to set the quiz category
+    this.setupCategoryDropdown();
+
+    // Log readiness
     this.startQuiz();
   }
 
@@ -81,12 +73,12 @@ class Main {
             error: 0,
             score: 90,
           },
-          Present_Tense_of_Verbs: {
+          present_tense_of_verbs: {
             played: 0,
             error: 0,
             score: 90,
           },
-          Word_Order: {
+          word_order: {
             played: 0,
             error: 0,
             score: 90,
@@ -101,17 +93,17 @@ class Main {
             error: 0,
             score: 90,
           },
-          Conjunctions: {
+          conjunctions: {
             played: 0,
             error: 0,
             score: 90,
           },
-          Possessive_Pronominal_Adjectives: {
+          possessive_pronominal_adjectives: {
             played: 0,
             error: 0,
             score: 90,
           },
-          Demonstrative_Adjectives: {
+          demonstrative_adjectives: {
             played: 0,
             error: 0,
             score: 90,
@@ -119,6 +111,53 @@ class Main {
         },
       };
     }
+  }
+
+  /**
+   * Sets up the category dropdown listener.
+   * Dynamically updates the quiz category based on the selected dropdown option.
+   */
+  setupCategoryDropdown(quiz) {
+    const dropdown = document.getElementById("categorySelector");
+
+    // Attach an event listener to the dropdown
+    dropdown.addEventListener("change", (event) => {
+      const selectedCategory = event.target.value;
+
+      if (selectedCategory) {
+        // Update the quiz category
+        this.quiz.setCategory(selectedCategory);
+        console.log(`Quiz category set to: ${selectedCategory}`);
+      }
+    });
+  }
+
+  // Function to dynamically populate the dropdown
+  populateDropdown() {
+    const dropdown = document.getElementById("categorySelector");
+    // Get keys from the first object in the array
+    const categories = Object.keys(chapter_1_questions[0]);
+
+    // Clear any existing options (if needed)
+    dropdown.innerHTML = "";
+
+    // Add a placeholder option
+    const placeholderOption = document.createElement("option");
+    placeholderOption.textContent = "Select a category";
+    placeholderOption.value = "";
+    placeholderOption.disabled = true;
+    placeholderOption.selected = true;
+    dropdown.appendChild(placeholderOption);
+
+    // Iterate over categories and create option elements
+    categories.forEach((category) => {
+      const option = document.createElement("option");
+      // Set the value to the key
+      option.value = category;
+      // Format the key for display (replace underscores with spaces)
+      option.textContent = category.replace(/_/g, " ");
+      dropdown.appendChild(option);
+    });
   }
 
   /**
