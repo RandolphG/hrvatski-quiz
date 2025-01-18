@@ -25,8 +25,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 .info_box.activeInfo,
@@ -36,7 +35,7 @@ body {
     opacity: 1;
     z-index: 5;
     pointer-events: auto;
-/ / transform: translate(- 50 %, - 50 %) scale(1);
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .start_btn {
@@ -50,13 +49,15 @@ body {
 
 .start_btn .selection {
     width: 100%;
-    background: #ffffff;
+    background: #007bff;
+
 }
 
 .start_btn .selection select {
     color: #007bff;
-    text-align: center;
+    text-align: left;
     width: 100%; /* Takes full width of the parent */
+    margin-bottom: 10px;
     height: 40px; /* Adjust height as needed */
     font-weight: 600; /* Increase font weight */
     font-size: 16px; /* Adjust font size for readability */
@@ -79,6 +80,8 @@ body {
     border-radius: 5px;
     background: #fff;
     cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
@@ -191,7 +194,6 @@ body {
 }
 
 
-
 .profile_box .buttons button:hover {
     background: #fff;
     color: #007bff;
@@ -234,7 +236,7 @@ body {
     color: #007bff;
 }
 
-.info_box .buttons,.profile_box .profile-buttons {
+.info_box .buttons, .profile_box .profile-buttons {
     height: 60px;
     display: flex;
     align-items: center;
@@ -243,7 +245,7 @@ body {
     border-top: 1px solid lightgrey;
 }
 
-.info_box .buttons button,.profile_box .profile-buttons button {
+.info_box .buttons button, .profile_box .profile-buttons button {
     margin: 0 5px;
     height: 40px;
     width: 150px;
@@ -311,14 +313,13 @@ body {
     font-size: 18px;
     font-weight: 500;
     height: 30px;
+    margin-left: 15px;
     width: 45px;
     color: #fff;
     border-radius: 5px;
     line-height: 30px;
     text-align: center;
     background: #343a40;
-    border: 1px solid #343a40;
-    user-select: none;
 }
 
 .quiz_box header .total_time {

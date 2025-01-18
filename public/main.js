@@ -127,6 +127,7 @@ class Main {
       if (selectedCategory) {
         // Update the quiz category
         this.quiz.setCategory(selectedCategory);
+        this.quiz.incrementTestCount(selectedCategory);
         console.log(`Quiz category set to: ${selectedCategory}`);
       }
     });

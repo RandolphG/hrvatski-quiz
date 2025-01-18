@@ -1,14 +1,14 @@
 export default class Quiz {
   constructor(questions, quizData) {
     // Parse questions from the nested data format
-    // this.questions = this.parseQuestions(questions);
-
-    this.originalQuestionsData = questions; // Save original nested data
+    // Save original nested data
+    this.originalQuestionsData = questions;
     this.questions = [];
-    this.category = null; // Active category for filtering questions
+    // Active category for filtering questions
+    this.category = null;
     this.totalTimeInterval = null;
-
-    this.filteredQuestions = []; // To store category-specific questions
+    // To store category-specific questions
+    this.filteredQuestions = [];
 
     // Store the quizData object
     this.data = quizData;
@@ -110,22 +110,6 @@ export default class Quiz {
     // Populate scores
     const scoreListElement = this.profileBox.querySelector(".score-list");
     scoreListElement.innerHTML = ""; // Clear previous entries
-
-    /*Object.entries(quizData.testCounts).forEach(([quizType, stats]) => {
-      const scoreItem = document.createElement("div");
-      scoreItem.classList.add("score-item");
-
-      scoreItem.innerHTML = `
-        ${quizType}:
-        <div class="results">
-          <span class="error">${stats.played || 0}</span>
-          <span class="score">${stats.errors || 0}</span>
-          <span class="score">${stats.score || 0}%</span>
-        </div>
-      `;
-
-      scoreListElement.appendChild(scoreItem);
-    });*/
 
     // Iterate over the `score` object to populate score items
     Object.entries(quizData.score).forEach(([quizType, stats]) => {
@@ -456,7 +440,7 @@ export default class Quiz {
 
   handleTimeOut() {
     clearInterval(this.counter);
-    this.timeText.textContent = "Time Off";
+    this.timeText.textContent = "TimeOut";
     const correctAns = this.questions[this.queCount].answer;
     [...this.optionList.children].forEach((option) => {
       if (option.textContent.trim() === correctAns) {
