@@ -2,7 +2,7 @@
   "name": "hrvatski-quiz",
   "version": "1.0.0",
   "description": "",
-  "main": "./public/main.js",
+  "main": "./public/index.js",
   "scripts": {
     "start": "node ./server",
     "test": "jest",
