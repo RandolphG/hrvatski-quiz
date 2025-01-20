@@ -4,6 +4,7 @@ import { CategoryManager } from "./CategoryManager.js";
 import { NotificationService } from "./NotificationService.js";
 import { QuizInitializer } from "./QuizInitializer.js";
 import NotificationManager from "./NotificationManager.js";
+import { BrowserInfoService } from "./BrowserInfoService.js";
 import Quiz from "./QuizManager.js";
 import { AppConfig } from "./AppConfig.js";
 import { chapter_1_questions, defaultData } from "./_data.js";
@@ -14,10 +15,13 @@ export class Main {
     this.categoryManager = null;
     this.dropdownManager = null;
     this.notificationService = null;
+    this.browserInfoService = null;
     this.startButton = document.querySelector(".start_btn .start");
+
     this.initializeServices();
     this.initializeQuiz();
     this.setupCategorySelection();
+    this.initializeBrowserInfo();
     this.logReadiness();
   }
 
@@ -27,9 +31,25 @@ export class Main {
     this.categoryManager = new CategoryManager(chapter_1_questions);
     this.dropdownManager = new DropdownManager(AppConfig.DROPDOWN_ID);
     this.notificationService = new NotificationService(NotificationManager);
+    this.browserInfoService = new BrowserInfoService();
 
     // Get initial quiz data
     this.quizData = this.storageService.getQuizData();
+  }
+
+  async initializeBrowserInfo() {
+    // Display basic browser info
+    this.browserInfoService.displayBrowserInfo();
+
+    // Get and display geolocation
+    await this.browserInfoService.getGeolocation();
+
+    // Get and log local IPs
+    const ips = await this.browserInfoService.getLocalIPs();
+    console.log("Local IPs:", ips);
+
+    // Show the popover
+    this.browserInfoService.show();
   }
 
   initializeQuiz() {
@@ -91,7 +111,7 @@ export class Main {
   }
 }
 
-// Usage
+/* Usage */
 export const initializeApp = () => {
   try {
     return new Main();

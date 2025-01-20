@@ -27,14 +27,13 @@ export class TimerManager {
     this.counterLine = setInterval(() => {
       time++;
       timeLine.style.width = time + "px";
-      if (time > 549) {
+      if (time > 560) {
         clearInterval(this.counterLine);
       }
     }, 57);
   }
 
   startTotalTimeCounter(updateCallback) {
-    console.log(`TOTAL TIME: ${this.totalTime}`);
     this.totalTimeInterval = setInterval(() => {
       this.totalTime++;
       updateCallback(this.formatTime(this.totalTime));

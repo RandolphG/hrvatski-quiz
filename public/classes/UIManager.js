@@ -113,7 +113,7 @@ export class UIManager {
 
   updateTotalTime(time) {
     console.log(`updateTotalTime(): ${time}`);
-    const totalTimeDiv = document.querySelector(".total_time");
+    const totalTimeDiv = document.querySelector(".total_time .time");
 
     // Debug checks
     if (!totalTimeDiv) {

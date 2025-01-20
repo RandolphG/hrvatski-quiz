@@ -657,7 +657,7 @@ footer button.show {
     .quiz_box,
     .result_box,
     .profile_box {
-        width: 80%;
+        width: 50%;
     }
 
     footer button,
