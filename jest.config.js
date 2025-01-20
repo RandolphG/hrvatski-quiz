@@ -15,7 +15,7 @@ const config = {
   ],
   testTimeout: 30000, // Puppeteer tests might need more time
   moduleFileExtensions: ["js"],
-  moduleDirectories: ["public/class", "public", "node_modules"],
+  moduleDirectories: ["public/classes", "public", "node_modules"],
 };
 
 module.exports = config;
