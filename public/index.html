@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/toast.css"/>
     <link rel="stylesheet" href="css/cup.css"/>
     <link rel="stylesheet" href="css/popover.css"/>
+    <link rel="stylesheet" href="css/expandable-list.css"/>
     <link rel="icon" href="./assets/favicon.ico"/>
     <link rel="apple-touch-icon-precomposed" href="assets/favicon.ico"/>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -23,11 +24,6 @@
 </div>
 <!-- START QUIZ | USER PROFILE BUTTONS -------------------------------------------------------------------------------->
 <div class="start_btn">
-    <div class="selection">
-        <label for="categorySelector"></label>
-        <select id="categorySelector">
-        </select>
-    </div>
     <button class="start">Start Quiz</button>
     <button class="stats">User Profile</button>
     <button class="stats">Vocabulary</button>
@@ -67,33 +63,47 @@
         <span>Topics</span>
     </div>
     <div class="info-list">
-        <div class="info">
-            <strong>Nouns and gender</strong>
-        </div>
-        <div class="info">
-            <strong>Personal pronouns</strong>
-        </div>
-        <div class="info">
-            <strong>Present tense of verb - "biti"</strong>
-        </div>
-        <div class="info">
-            <strong>Questions / Question Words</strong>
-        </div>
-        <div class="info">
-            <strong>Presentative statements</strong>
-        </div>
-        <div class="info">
-            <strong>Conjunctions</strong>
-        </div>
-        <div class="info">
-            <strong>Possessive Pronominal Adjectives.</strong>
-        </div>
-        <div class="info">
-            <strong>Demonstrative Pronominal Adjectives</strong>
-        </div>
-        <div class="info">
-            <strong>Word order</strong>
-        </div>
+        <ul class='risks'>
+            <h3 class='risks__header'>Lessons</h3>
+            <li class='risk risk--high' data-risk-score='65'>
+                <span class='risk__name'>Chapter 1</span>
+                <div class='risk__description'>
+                    <p>Nouns and gender</p>
+                    <p>Personal pronouns</p>
+                    <p>Present tense of verb - "biti"</p>
+                    <p>Questions / Question Words</p>
+                    <p>Presentative statements</p>
+                    <p>Conjunctions</p>
+                    <p>Possessive Pronominal Adjectives.</p>
+                    <p>Demonstrative Pronominal Adjectives</p>
+                    <p>Word order</p>
+                </div>
+            </li>
+            <li class='risk risk--high' data-risk-score='0'>
+                <span class='risk__name'>Chapter 2</span>
+                <div class='risk__description'>
+                    <p>topic 1</p>
+                </div>
+            </li>
+            <li class='risk risk--high' data-risk-score='0'>
+                <span class='risk__name'>Chapter 3</span>
+                <div class='risk__description'>
+                    <p>topic 1</p>
+                </div>
+            </li>
+            <li class='risk' data-risk-score='0'>
+                <span class='risk__name'>Chapter 4</span>
+                <div class='risk__description'>
+                    <p>topic 1</p>
+                </div>
+            </li>
+            <li class='risk' data-risk-score='0'>
+                <span class='risk__name'>Chapter 5</span>
+                <div class='risk__description'>
+                    <p>topic 1</p>
+                </div>
+            </li>
+        </ul>
     </div>
 
     <div class="buttons">
@@ -137,5 +147,5 @@
     </div>
 </div>
 </body>
-<script type="module" src="./index.js"></script>
+<script type="module" src="./bundle.js"></script>
 </html>

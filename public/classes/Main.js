@@ -5,6 +5,7 @@ import { NotificationService } from "./NotificationService.js";
 import { QuizInitializer } from "./QuizInitializer.js";
 import NotificationManager from "./NotificationManager.js";
 import { BrowserInfoService } from "./BrowserInfoService.js";
+import { ListManager } from "./ListManager.js";
 import Quiz from "./QuizManager.js";
 import { AppConfig } from "./AppConfig.js";
 import { chapter_1_questions, defaultData } from "./_data.js";
@@ -16,11 +17,14 @@ export class Main {
     this.dropdownManager = null;
     this.notificationService = null;
     this.browserInfoService = null;
+    this.listManager = null;
     this.startButton = document.querySelector(".start_btn .start");
 
     this.initializeServices();
+    this.initializeList(); // Add this line
     this.initializeQuiz();
-    this.setupCategorySelection();
+    this.setupListSelection();
+    // this.setupCategorySelection();
     this.initializeBrowserInfo();
     this.logReadiness();
   }
@@ -29,7 +33,7 @@ export class Main {
     // Initialize all required services
     this.storageService = new StorageService(defaultData);
     this.categoryManager = new CategoryManager(chapter_1_questions);
-    this.dropdownManager = new DropdownManager(AppConfig.DROPDOWN_ID);
+    // this.dropdownManager = new DropdownManager(AppConfig.DROPDOWN_ID);
     this.notificationService = new NotificationService(NotificationManager);
     this.browserInfoService = new BrowserInfoService();
 
@@ -52,6 +56,14 @@ export class Main {
     this.browserInfoService.show();
   }
 
+  /**
+   * Get selected categories
+   * @returns {*}
+   */
+  getSelectedCategories() {
+    return this.listManager.getSelectedItems();
+  }
+
   initializeQuiz() {
     // Initialize quiz with QuizInitializer
     const quizInitializer = new QuizInitializer(
@@ -60,6 +72,30 @@ export class Main {
       this.quizData,
     );
     this.quiz = quizInitializer.initialize();
+  }
+
+  initializeList() {
+    this.listManager = new ListManager(chapter_1_questions);
+    this.listManager.populateList();
+  }
+
+  setupListSelection() {
+    // Access the list container through listManager
+    this.listManager.listContainer.addEventListener(
+      "categorySelected",
+      (event) => {
+        const { category, isSelected } = event.detail;
+
+        if (isSelected) {
+          this.handleCategorySelection(category);
+        } else {
+          // Handle deselection if needed
+          this.startButton.disabled = true;
+          this.startButton.style.opacity = "0.5";
+          this.startButton.style.cursor = "not-allowed";
+        }
+      },
+    );
   }
 
   setupStartButton() {
@@ -72,7 +108,7 @@ export class Main {
     this.startButton.style.cursor = "not-allowed";
   }
 
-  setupCategorySelection() {
+  /*setupCategorySelection() {
     // Get and populate categories
     const categories = this.categoryManager.getCategories();
     this.dropdownManager.populate(categories);
@@ -84,7 +120,7 @@ export class Main {
         this.handleCategorySelection(selectedCategory);
       }
     });
-  }
+  }*/
 
   handleCategorySelection(category) {
     // Update quiz category

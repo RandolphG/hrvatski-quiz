@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+.risks {
+    color: #3F3D3C;
+    font-family: "Lato", sans-serif;
+    border: 1px solid #E3E3E3;
+    border-radius: 3px;
+    list-style-type: none;
+    padding: 1rem 0.75rem 0.25rem;
+
+    max-height: 300px; /* Set the maximum height of the list */
+    overflow-y: auto;  /* Enable vertical scrolling */
+    /*border: 1px solid #ccc; !* Optional: Add a border for better visibility *!*/
+    /*padding: 10px; !* Optional: Add padding for better appearance *!*/
+}
+
+.risks__header {
+    margin-top: 0;
+}
+
+.risk {
+    border: 1px solid #E3E3E3;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    padding: 0.75rem 0;
+    position: relative;
+}
+
+.risk:before {
+    border-right: 2px solid #42996D;
+    color: #42996D;
+    content: attr(data-risk-score);
+    display: inline-block;
+    height: 1.4rem;
+    line-height: 1.4rem;
+    margin-right: 1rem;
+    text-align: center;
+    width: 2.8rem;
+}
+
+.risk:after {
+    color: #E3E3E3;
+    content: "";
+    font-family: "FontAwesome";
+    font-size: 0.7rem;
+    position: absolute;
+    right: 1.4rem;
+    top: 1.0769230769rem;
+}
+
+.risk.is-opened .risk__description {
+    display: block;
+}
+
+.risk.is-opened:after {
+    content: "";
+}
+
+.risk--high:before {
+    border-right-color: #DE4D33;
+    color: #DE4D33;
+}
+
+.risk__description {
+    color: #a6a3a1;
+    display: none;
+    border-top: 1px solid #E3E3E3;
+    font-style: italic;
+    margin: 0.5rem 1rem 0.25rem 3.8rem;
+    padding-top: 0.5rem;
+}
+
+/*
+.risk__description p {
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.risk__description p:hover {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    transform: translateX(5px);
+}*/

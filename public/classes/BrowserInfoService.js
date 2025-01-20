@@ -1,8 +1,10 @@
 export class BrowserInfoService {
   constructor() {
+    this.apiKey = "AIzaSyDCkf8oXjXMFHXCgTa-u54tVRIRCzqR5LQ";
     this.popover = document.getElementById("browserInfoPopover");
     this.browserData = document.getElementById("browserData");
     this.data = this.collectBrowserData();
+    this.getAddressFromCoordinates(45.81, 15.8);
   }
 
   collectBrowserData() {
@@ -66,6 +68,7 @@ export class BrowserInfoService {
       });
 
       const { latitude, longitude } = position.coords;
+
       this.browserData.innerHTML += `
         <br><strong>Location:</strong> Lat: ${latitude.toFixed(2)}, Long: ${longitude.toFixed(2)}
       `;
@@ -78,5 +81,22 @@ export class BrowserInfoService {
 
   show() {
     this.popover.style.display = "block";
+  }
+
+  // Reverse Geocoding Function
+  getAddressFromCoordinates(lat, lng) {
+    const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${this.apiKey}`;
+
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.status === "OK") {
+          const address = data.results[0].formatted_address;
+          console.log("Address:", address);
+        } else {
+          console.error("Geocoding failed:", data.status);
+        }
+      })
+      .catch((error) => console.error("Error:", error));
   }
 }

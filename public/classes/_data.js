@@ -130,7 +130,7 @@ export const chapter_1_questions = [
         options: ["Masculine", "Feminine", "Neuter"],
       },
     ],
-    nouns_of_professions_and_nationalities: [
+    professions_and_nationalities: [
       {
         numb: 1,
         question:
