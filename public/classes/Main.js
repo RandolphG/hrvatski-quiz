@@ -6,7 +6,7 @@ import { QuizInitializer } from "./QuizInitializer.js";
 import NotificationManager from "./NotificationManager.js";
 import Quiz from "./QuizManager.js";
 import { AppConfig } from "./AppConfig.js";
-import { chapter_1_questions, defaultData } from "../library.js";
+import { chapter_1_questions, defaultData } from "./_data.js";
 
 export class Main {
   constructor() {
