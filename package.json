@@ -4,7 +4,7 @@
   "description": "",
   "main": "./public/main.js",
   "scripts": {
-    "start": "node .",
+    "start": "node ./server",
     "test": "jest",
     "test:e2e": "jest tests/e2e --runInBand --debug",
     "jsdom": "jest --selectProjects jsdom --debug",
