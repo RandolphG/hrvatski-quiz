@@ -9,7 +9,27 @@
 }
 
 body {
-    background: #007bff;
+    min-height: 100vh;
+    display: grid;
+    background: linear-gradient(#222, #111);
+}
+
+body::before {
+    --stroke: rgba(255 255 255 / .1);
+    --stroke-width: 1px;
+    --stroke-gap: 50px;
+    --pos-x: 50%;
+    --pos-y: 1rem;
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: repeating-conic-gradient(at var(--pos-x) var(--pos-y), var(--stroke) 0deg .1deg, transparent .1deg 5deg),
+    repeating-radial-gradient(100px 100px at var(--pos-x) var(--pos-y), var(--stroke) 0px var(--stroke-width), transparent var(--stroke-width) var(--stroke-gap)),
+    linear-gradient(#222, #111);
+    image-rendering: pixelated;
+    pointer-events: none;
+    mask: radial-gradient(circle 200px at 50% var(--pos-y), #0000 50%, #000);
 }
 
 ::selection {

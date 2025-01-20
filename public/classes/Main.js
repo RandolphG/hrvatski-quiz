@@ -123,20 +123,16 @@ export class Main {
   }*/
 
   handleCategorySelection(category) {
-    // Update quiz category
     this.quiz.setCategory(category);
-
     /*this.quiz.incrementTestCount(category);*/
 
-    // Enable start button when category is selected
+    /* Enable start button when category is selected */
     if (this.startButton) {
-      // Add safety check
       this.startButton.disabled = false;
       this.startButton.style.opacity = "1";
       this.startButton.style.cursor = "pointer";
     }
 
-    // Show notification
     this.notificationService.showCategoryNotification(category);
 
     console.log(`Quiz category set to: ${category}`);

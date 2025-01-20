@@ -3,14 +3,14 @@
 .risks {
     color: #3F3D3C;
     font-family: "Lato", sans-serif;
-    border: 1px solid #E3E3E3;
+    /*border: 1px solid #E3E3E3;*/
     border-radius: 3px;
     list-style-type: none;
     padding: 1rem 0.75rem 0.25rem;
 
     max-height: 300px; /* Set the maximum height of the list */
     overflow-y: auto;  /* Enable vertical scrolling */
-    /*border: 1px solid #ccc; !* Optional: Add a border for better visibility *!*/
+    border: 1px solid #ccc; /* Optional: Add a border for better visibility */
     /*padding: 10px; !* Optional: Add padding for better appearance *!*/
 }
 
@@ -41,8 +41,8 @@
 
 .risk:after {
     color: #E3E3E3;
-    content: "";
-    font-family: "FontAwesome";
+    content: "\f078";
+    font-family: "FontAwesome", sans-serif;
     font-size: 0.7rem;
     position: absolute;
     right: 1.4rem;
@@ -54,7 +54,7 @@
 }
 
 .risk.is-opened:after {
-    content: "";
+    content: "\f077";
 }
 
 .risk--high:before {
