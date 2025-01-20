@@ -1,5 +1,0 @@
-Using Express.js with Vercel
-https://vercel.com/guides/using-express-with-vercel
-
-Deploying a Simple Node.js Application with Vercel
-https://medium.com/@vitaliykorzenkoua/deploying-a-simple-node-js-application-with-vercel-1128013c8eb9
