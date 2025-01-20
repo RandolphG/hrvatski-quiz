@@ -1,0 +1,313 @@
+:root {
+    --accent-color: skyblue;
+    --saturated-accent-color: color-mix(in srgb, var(--accent-color), dodgerblue);
+    --darker-accent-color: color-mix(in srgb, var(--accent-color), black 65%);
+
+    --blue-dark: #1E384C;
+    --blue: #2C7FBE;
+    --blue-light: #32BAFA;
+}
+
+.container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 70px 1fr;
+    background: var(--darker-accent-color);
+    color: #fff;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container h1 {
+    --offset: 0px;
+    grid-column: 1/3;
+    width: 250px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent-color);
+    color: var(--darker-accent-color);
+    border-radius: 0 0 25px 25px;
+    position: relative;
+    /* margin-left: 220px; */
+}
+
+.container h1::before,
+.container h1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: calc(-10% + var(--offset));
+    width: 10%;
+    aspect-ratio: 1;
+    background-color: var(--accent-color);
+    mask: radial-gradient(50px 50px at bottom left, #0000 50%, #000 51%);
+}
+
+.container h1::after {
+    left: auto;
+    right: calc(-10% + var(--offset));
+    mask: radial-gradient(50px 50px at bottom right, #0000 50%, #000 51%);
+}
+
+.container h1 .drops {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.container h1 .drops span {
+    animation: 1s ease-in-out infinite drop;
+    /* animation-duration: calc((1 + var(--drop-index)) * 1s); */
+    /* animation-delay: calc((1 + var(--drop-index)) * 1s); */
+}
+
+@keyframes drop {
+    to {
+        opacity: 0;
+        transform: translateY(300px);
+    }
+}
+
+.cup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 25px;
+    height: 100%;
+    position: relative;
+}
+
+.cup-container h3 {
+    margin-bottom: auto;
+}
+
+.cup-container h3 span {
+    margin-inline: 5px;
+    font-size: 25px;
+    vertical-align: middle;
+}
+
+.cup-container .cup {
+    width: 200px;
+    height: 330px;
+    margin-bottom: auto;
+    background-color: rgb(255 255 255 / .9);
+    border-radius: 0 0 25px 25px;
+    color: var(--darker-accent-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(149 157 165 / .2);
+
+    box-shadow: 0 10px 10px -5px rgba(0 0 0 /.8);
+}
+
+.cup .remained {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    height: 100%;
+    overflow: hidden;
+    transition: .3s ease;
+    line-height: 1.1;
+}
+
+.cup .remained span {
+    font-size: calc((2 - var(--percentage, 0)) * 20px);
+    font-weight: bold;
+}
+
+.cup .remained small {
+    font-size: 16px;
+}
+
+.cup .percentage {
+    /* background: var(--saturated-accent-color); */
+    background: #EBEDEE;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: calc((1 + var(--percentage)) * 20px);
+    height: 0;
+    /* overflow: hidden; */
+    transition: .3s ease;
+
+    position: relative;
+}
+
+.percentage .waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: .4s ease transform;
+    transform-origin: bottom center;
+}
+
+.percentage .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: wave 1s linear infinite;
+}
+
+.wave-front {
+    z-index: 2;
+    color: var(--blue-light);
+}
+
+.wave-back {
+    z-index: 2;
+    color: var(--blue);
+    animation-direction: reverse !important;
+}
+
+
+.water {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 25px);
+    background-color: currentColor;
+}
+
+.water svg {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 99.9%;
+    margin-bottom: -1px;
+}
+
+svg {
+    fill: currentColor;
+}
+
+.water:first-of-type {
+    translate: -100% 0%;
+}
+
+
+@keyframes wave {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(50%, .5em, 0);
+    }
+
+    100% {
+        transform: translate3d(100%, 0, 0);
+    }
+}
+
+.percentage span {
+    position: relative;
+    z-index: 3;
+}
+
+.small-cups-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+.small-cups-container .text {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.small-cups {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+}
+
+.cup.small {
+    width: 50px;
+    height: 75px;
+    border-radius: 0 0 12px 12px;
+    background: #fff;
+    color: var(--darker-accent-color);
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    transition: .3s ease;
+}
+
+.cup.small.full {
+    background: var(--accent-color);
+    color: var(--darker-accent-color);
+    font-weight: bold;
+}
+
+@media screen and (max-width: 850px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 70px 1fr 1fr;
+    }
+
+    .container h1 {
+        --offset: 1px;
+        scale: .75;
+        top: -10px;
+        font-size: 25px;
+    }
+
+    .cup-container .cup {
+        width: 150px;
+        height: 250px;
+    }
+
+    .small-cups-container {
+        grid-row: 3/3;
+    }
+
+    .small-cups-container .text {
+        margin-top: 5px;
+        font-size: 12px;
+    }
+
+    .small-cups-container .small-cups {
+        width: 220px;
+    }
+
+    .small-cups-container .cup.small {
+        width: 40px;
+        height: 65px;
+        border-radius: 0 0 8px 8px;
+        font-size: 14px;
+    }
+}
