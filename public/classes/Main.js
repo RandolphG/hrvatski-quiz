@@ -108,20 +108,6 @@ export class Main {
     this.startButton.style.cursor = "not-allowed";
   }
 
-  /*setupCategorySelection() {
-    // Get and populate categories
-    const categories = this.categoryManager.getCategories();
-    this.dropdownManager.populate(categories);
-
-    // Set up category selection handling
-    this.dropdownManager.onChange((event) => {
-      const selectedCategory = event.target.value;
-      if (selectedCategory) {
-        this.handleCategorySelection(selectedCategory);
-      }
-    });
-  }*/
-
   handleCategorySelection(category) {
     this.quiz.setCategory(category);
     /*this.quiz.incrementTestCount(category);*/

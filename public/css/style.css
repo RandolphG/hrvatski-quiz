@@ -143,18 +143,78 @@ body::before {
 }
 
 .profile_box .profile-stats {
-    padding: 15px 30px;
+    padding: 15px 15px;
+    border: green solid 3px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    height: 300px;
 }
 
-.profile_box .profile-stats .stat {
-    margin: 10px 0;
+.profile_box .profile-chart {
+    border: #450eb1 solid 3px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: fit-content;
+    justify-content: space-between;
+}
+
+.profile_box .profile-stats .profile-details {
+    border: #26634e solid 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 100%;
+}
+
+.profile_box .profile-stats .profile-details .profile-photo {
+    width: 250px;
+    height: 220px;
+    background: black;
+    border: #9a1212 solid 3px;
+    margin: 10px 10px;
+}
+
+.profile_box .profile-stats .profile-details .profile-info {
+    border: #9a1212 solid 3px;
+    width: 100%;
+    margin: 0 10px;
+    padding: 0 10px;
+
+}
+
+.profile_box .profile-stats .profile-stat {
+    border: #9a1212 solid 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 175px;
+    height: 100%;
+}
+
+.profile_box .profile-stats .profile-stat .stat {
+    width: 100%;
+    margin: 5px 0;
+    border: #e6d050 solid 3px;
     font-size: 17px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.profile_box .profile-stats .stat span {
+.profile_box .profile-stats .profile-stat .stat div {
+    border: #a100ff solid 3px;
+    font-weight: 600;
+    color: #007bff;
+}
+
+.profile_box .profile-stats .profile-stat .stat span {
+    border: green solid 3px;
     font-weight: 600;
     color: #007bff;
 }
